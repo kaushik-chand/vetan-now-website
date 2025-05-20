@@ -20,7 +20,8 @@
     gap: 30px;
     width: 100%;
     max-width: 1200px;
-    margin-top: -100px; /* adjust in responsive design */
+    margin-top: -100px;
+    /* adjust in responsive design */
 }
 
 .banner .left {
@@ -31,7 +32,8 @@
     gap: 20px;
     width: 70%;
     max-width: 700px;
-    margin-right: 30px;/* adjust in responsive design */
+    margin-right: 30px;
+    /* adjust in responsive design */
 }
 
 .banner .left h1 {
@@ -41,7 +43,7 @@
     line-height: 1.2;
 }
 
-.banner .left h2{
+.banner .left h2 {
     font-size: 34px;
 }
 
@@ -53,11 +55,11 @@
     font-weight: bolder;
 }
 
-.banner .left h3{
+.banner .left h3 {
     font-size: 24px;
 }
 
-.banner .left p{
+.banner .left p {
     font-size: 18px;
     color: #666;
     font-weight: 700;

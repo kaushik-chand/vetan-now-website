@@ -8,7 +8,7 @@ body {
   font-family: 'Nunito', sans-serif;
   background-color: #fff;
   max-width: 100vw;
-  overflow: hidden;
+  /* overflow: hidden; */
   overflow-x: hidden;
     /* Optional safeguard */
 }
