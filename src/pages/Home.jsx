@@ -11,6 +11,11 @@ import "./who_we_are.css";
 import "./meet_our_team.css";
 import avatar from "../img/avatar.png";
 import "./advisory_panel.css";
+import "./mentor_panel.css";
+import partnerships from "../img/partnerships.png";
+import "./partnerships.css";
+import dummy_company from "../img/dummy_comapny.png";
+
 
 const Home = () => {
   return (
@@ -225,6 +230,81 @@ const Home = () => {
             </p>
             <h4>COO</h4>
           </div> */}
+        </div>
+      </div>
+
+      {/* Mentor panel */}
+      <div className="mentor-panel">
+        <h1>
+          Meet Our <span>Mentor Panel</span>
+        </h1>
+
+        <div className="mentor-panel-container">
+          <div className="card">
+            <img src={avatar} alt="Team Member 1" />
+            <h3>John Doe</h3>
+            <p>
+              John Doe is the CEO of VetanNow. He has over 10 years of
+              experience
+            </p>
+            <h4>CEO</h4>
+            {/* des */}
+          </div>
+          <div className="card">
+            <img src={avatar} alt="Team Member 2" />
+            <h3>Jane Smith</h3>
+            <p>
+              Jane Smith is the CTO of VetanNow. She has a background in
+              technology and finance.
+            </p>
+            <h4>CTO</h4>
+          </div>
+          <div className="card">
+            <img src={avatar} alt="Team Member 3" />
+            <h3>Mike Johnson</h3>
+            <p>
+              Mike Johnson is the CFO of VetanNow. He has extensive experience
+              in financial management.
+            </p>
+            <h4>CFO</h4>
+          </div>
+          {/* <div className="card">
+            <img src={step4} alt="Team Member 4" />
+            <h3>Emily Davis</h3>
+            <p>
+              Emily Davis is the COO of VetanNow. She has a strong background in
+              operations and management.
+            </p>
+            <h4>COO</h4>
+          </div> */}
+        </div>
+      </div>
+
+      {/* Partnerships */}
+
+      <div className="partnerships">
+        <h1>
+          Our <span>Partnerships</span>
+        </h1>
+
+        <img src={partnerships} alt="partnerships" />
+
+        <div className="partnerships-container">
+          <div className="card">
+            <img src={dummy_company} alt="Partner 1" />
+            <h3>Partner 1</h3>
+            <p>Description of Partner 1</p>
+          </div>
+          <div className="card">
+            <img src={dummy_company} alt="Partner 2" />
+            <h3>Partner 2</h3>
+            <p>Description of Partner 2</p>
+          </div>
+          <div className="card">
+            <img src={dummy_company} alt="Partner 3" />
+            <h3>Partner 3</h3>
+            <p>Description of Partner 3</p>
+          </div>
         </div>
       </div>
     </div>

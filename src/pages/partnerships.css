@@ -1,0 +1,72 @@
+.partnerships {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: linear-gradient(to bottom, #fff8f8, #ffeaea);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.partnerships h1 {
+    font-size: 3rem;
+    color: #222;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.partnerships h1 span {
+    color: #ff5757;
+    font-weight: 800;
+}
+
+.partnerships>img {
+    max-width: 180px;
+    margin: 0 auto 2.5rem;
+    display: block;
+}
+
+.partnerships-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    padding: 2rem;
+}
+
+.partnerships-container .card {
+    background: #ffffff;
+    border: none;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    width: 300px;
+    box-shadow: 0 10px 25px rgba(255, 87, 87, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.partnerships-container .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(255, 87, 87, 0.25);
+}
+
+.partnerships-container .card img {
+    max-width: 100px;
+    margin-bottom: 1.2rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.partnerships-container .card h3 {
+    color: #ff5757;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.partnerships-container .card p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+}
