@@ -8,6 +8,8 @@ import step4 from "../img/step4.png";
 import step2 from "../img/step 2.png";
 import who_we_are from "../img/whoweare.png";
 import "./who_we_are.css";
+import "./meet_our_team.css";
+import avatar from "../img/avatar.png";
 
 const Home = () => {
   return (
@@ -125,6 +127,55 @@ const Home = () => {
           <div className="right-image">
             <img src={who_we_are} alt="who_we_are" />
           </div>
+        </div>
+      </div>
+
+      {/* END OF WHO WE ARE SECTION */}
+
+      {/* Meet our team */}
+      <div className="meet_our_team">
+        <h1>
+          Meet Our <span>Team</span>
+        </h1>
+
+        <div className="meet_our_team_container">
+          <div className="card">
+            <img src={avatar} alt="Team Member 1" />
+            <h3>John Doe</h3>
+            <p>
+              John Doe is the CEO of VetanNow. He has over 10 years of
+              experience
+            </p>
+            <h4>CEO</h4>
+            {/* des */}
+          </div>
+          <div className="card">
+            <img src={avatar} alt="Team Member 2" />
+            <h3>Jane Smith</h3>
+            <p>
+              Jane Smith is the CTO of VetanNow. She has a background in
+              technology and finance.
+            </p>
+            <h4>CTO</h4>
+          </div>
+          <div className="card">
+            <img src={avatar} alt="Team Member 3" />
+            <h3>Mike Johnson</h3>
+            <p>
+              Mike Johnson is the CFO of VetanNow. He has extensive experience
+              in financial management.
+            </p>
+            <h4>CFO</h4>
+          </div>
+          {/* <div className="card">
+            <img src={step4} alt="Team Member 4" />
+            <h3>Emily Davis</h3>
+            <p>
+              Emily Davis is the COO of VetanNow. She has a strong background in
+              operations and management.
+            </p>
+            <h4>COO</h4>
+          </div> */}
         </div>
       </div>
     </div>
