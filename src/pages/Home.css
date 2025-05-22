@@ -3,14 +3,14 @@
 .home-container {
     font-family: 'Nunito', sans-serif;
     padding: 10px 20px;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    max-width: 1200px;
+    /* max-width: 1200px; */
 }
 
 .banner {

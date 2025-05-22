@@ -15,6 +15,8 @@ import "./mentor_panel.css";
 import partnerships from "../img/partnerships.png";
 import "./partnerships.css";
 import dummy_company from "../img/dummy_comapny.png";
+import howitworks1 from "../img/howitwork1.png";
+import howitworks2 from "../img/howitwork2.png";
 
 
 const Home = () => {
@@ -39,7 +41,11 @@ const Home = () => {
           <img src={rightImage} alt="Home Banner" />
         </div>
       </div>
+
       <div className="how_itworks">
+        <div className="how_itworks_image">
+          <img src={howitworks1} alt="How It Works" />
+        </div>
         <h1>
           {" "}
           How <span>VetanNow</span> Works{" "}
@@ -107,6 +113,10 @@ const Home = () => {
               <img src={step4} alt="Payroll Integration" />
             </div>
           </div>
+
+          {/* <div className="how_itworks_image_down">
+            <img src={howitworks2} alt="How It Works" />
+          </div> */}
         </div>
       </div>
       {/* WHO WE ARE SECTION */}
