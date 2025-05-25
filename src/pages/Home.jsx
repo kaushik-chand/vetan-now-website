@@ -43,14 +43,11 @@ const Home = () => {
       </div>
 
       <div className="how_itworks">
-        <div className="how_itworks_image">
-          <img src={howitworks1} alt="How It Works" />
-        </div>
-        <h1>
-          {" "}
-          How <span>VetanNow</span> Works{" "}
-        </h1>{" "}
         <div className="how_itworks_container">
+          <h1>
+            {" "}
+            How <span>VetanNow</span> Works{" "}
+          </h1>{" "}
           <div className="step-card">
             <div className="card">
               <div>
@@ -66,7 +63,6 @@ const Home = () => {
             </div>
             <div className="arrow">↓</div>
           </div>
-
           <div className="step-card">
             <div className="card reverse">
               <div>
@@ -82,7 +78,6 @@ const Home = () => {
             </div>
             <div className="arrow">↓</div>
           </div>
-
           <div className="step-card">
             <div className="card">
               <div>
@@ -98,7 +93,6 @@ const Home = () => {
             </div>
             <div className="arrow">↓</div>
           </div>
-
           <div className="step-card">
             <div className="card reverse">
               <div>
@@ -113,7 +107,6 @@ const Home = () => {
               <img src={step4} alt="Payroll Integration" />
             </div>
           </div>
-
           {/* <div className="how_itworks_image_down">
             <img src={howitworks2} alt="How It Works" />
           </div> */}
@@ -293,11 +286,42 @@ const Home = () => {
       {/* Partnerships */}
 
       <div className="partnerships">
+      <img src={partnerships} alt="Partnerships" />
         <h1>
           Our <span>Partnerships</span>
         </h1>
 
-        <img src={partnerships} alt="partnerships" />
+        <p>
+          We partner with change making employers and enable them to support and
+          work towards the financial wellbeing of their employees.
+          <br />
+          <br />
+          <span>
+            Before we partner, We evaluate 3 major aspects for any potential
+            employer partner
+          </span>
+          <br />
+          <br />
+          Corporate Background Professional backgrounds ofpromoters and
+          operators, analyze ongoing litigations as well as reference calls with
+          key customers and other stakeholders
+          <br />
+          <br />
+          Financials Analysis of annual reports for previous years to understand
+          scale, growth of business, unit economics, profitability patterns,
+          current cash position and outstanding debts and loans
+          <br />
+          <br />
+          Business Performance Review of key contracts, industry trends and
+          assets to understand ability of employer partner to settle payments
+          disbursements incurred Crediito.
+          <br />
+          <br />
+          <span className="highlight">
+            Over xxx employees lives improved by financial well-being and
+            productivity
+          </span>
+        </p>
 
         <div className="partnerships-container">
           <div className="card">
