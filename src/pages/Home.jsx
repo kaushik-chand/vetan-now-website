@@ -19,7 +19,12 @@ import howitworks1 from "../img/howitwork1.png";
 import howitworks2 from "../img/howitwork2.png";
 import "./contact_us.css";
 import contact from "../img/contact.png";
-import './footer.css'
+import "./footer.css";
+import vetannowLogo from "../img/vetannow_logo.png";
+import twitterIcon from "../img/twitter.png";
+import instagramIcon from "../img/instagram.png";
+import facebookIcon from "../img/facebook.png";
+import linkedinIcon from "../img/linkedin-logo.png";
 
 const Home = () => {
   return (
@@ -390,101 +395,106 @@ const Home = () => {
       {/* foooter */}
       <footer class="footer">
         <div class="footer-container">
-          <div class="footer-brand">
-            <img src="your-logo-path.png" alt="VetanNow Logo" class="logo" />
-            <p class="description">
-              VetanNow is India’s financial wellness suite that enables
-              employees to build a foundation for financial well-being.
-            </p>
-          </div>
+          <div className="top">
+            <div className="left">
+              <img src={vetannowLogo} alt="VetanNow Logo" />
+              <p>
+                VetanNow is India s financial wellness suite that enables
+                employees to build a foundation for financial well being.
+              </p>
+            </div>
+            <div className="right">
+              <div className="col">
+                <h3>Products</h3>
+                <ul>
+                  <li>Salary On Demand</li>
+                  <li>Financial Coaching</li>
+                  <li>Financial Literacy</li>
+                </ul>
+                <hr />
+                <ul>
+                  <li>Company</li>
+                  <li>About Us</li>
+                  <li>FAQs</li>
+                  <li>Blog</li>
+                  <li>Contact Us</li>
+                </ul>
+              </div>
+              <div className="col">
+                <h3>LEGAL</h3>
+                <ul>
+                  <li>Privacy Policy</li>
+                  <li>Terms of Service</li>
+                  <li>Refund Policy</li>
+                  <li>Cookie Policy</li>
+                </ul>
+              </div>
+              <div className="col">
+                <ul>
+                  <li>✅ ISO 27001 Certified</li>
+                  <li>✅ Strict Data Privacy</li>
+                  <li>✅ Labour Law Compliant</li>
+                </ul>
 
-          <div class="footer-links">
-            <div>
-              <h4>PRODUCTS</h4>
-              <ul>
-                <li>
-                  <a href="#">Salary On-Demand</a>
-                </li>
-                <li>
-                  <a href="#">Financial Coaching</a>
-                </li>
-                <li>
-                  <a href="#">Company</a>
-                </li>
-                <li>
-                  <a href="#">About Us</a>
-                </li>
-                <li>
-                  <a href="#">FAQs</a>
-                </li>
-                <li>
-                  <a href="#">Blog</a>
-                </li>
-                <li>
-                  <a href="#">Contact Us</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h4>LEGAL</h4>
-              <ul>
-                <li>
-                  <a href="#">Privacy Policy</a>
-                </li>
-                <li>
-                  <a href="#">Data Policy</a>
-                </li>
-                <li>
-                  <a href="#">Terms</a>
-                </li>
-                <li>
-                  <a href="#">Financial Partners</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <ul class="compliance-list">
-                <li>✅ ISO 27001 certified</li>
-                <li>✅ Strict Data Privacy</li>
-                <li>✅ Labour Law compliant</li>
-              </ul>
-              <div class="social-icons">
-                <a href="#">
-                  <img src="insta.svg" alt="Instagram" />
-                </a>
-                <a href="#">
-                  <img src="twitter.svg" alt="Twitter" />
-                </a>
-                <a href="#">
-                  <img src="fb.svg" alt="Facebook" />
-                </a>
-                <a href="#">
-                  <img src="linkedin.svg" alt="LinkedIn" />
-                </a>
+                {/* social */}
+                <div className="social-icons">
+                  <a
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                   <img src={twitterIcon} alt="Twiter" />
+                  </a>
+                  <a
+                    href=""
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                   <img src={instagramIcon} alt="Instagram" />
+                  </a>
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={facebookIcon} alt="facebook" />
+                  </a>
+
+                  <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >
+                    <img src={linkedinIcon} alt="LinkedIn" />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="footer-contact">
-            <div>
-              <h5>SALES</h5>
-              <p>queries@vetannow.com</p>
+          <div className="bottom">
+            <div className="col">
+              <h4>SALES</h4>
+              {/* email */}
+                <a href="mailto:quires@vetannow.com">
+                  {/* dummy */}
+                  quires@vetannow.com
+                </a>
             </div>
-            <div>
-              <h5>MEDIA</h5>
-              <p>media@vetannow.com</p>
+            <div className="col">
+              {/* media */}
+              <h4>MEDIA</h4>
+              <a href="mailto:media@vetanNow.com">
+                {/* dummy */}
+                media@vetanNow.com
+                </a>
             </div>
-            <div>
-              <h5>CUSTOMER SERVICE</h5>
-              <p>support@vetannow.com</p>
+            <div className="col">
+              <h4>CUSTUMER SERVICE</h4>
+              <a href="mailto:support@vetannow.com">
+                {/* dummy */}
+                support@vetannow.com
+              </a>
             </div>
-          </div>
-
-          <div class="footer-apps">
-            <img src="app-store.png" alt="App Store" />
-            <img src="play-store.png" alt="Google Play" />
-            <img src="whatsapp.png" alt="WhatsApp" />
-            <img src="web-app.png" alt="Web App" />
           </div>
         </div>
       </footer>

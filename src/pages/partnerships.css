@@ -13,6 +13,7 @@
     margin-bottom: 2.5rem;
     font-weight: 700;
     letter-spacing: 1px;
+    padding: 0 1rem;
 }
 
 .partnerships h1 span {
@@ -21,13 +22,14 @@
 }
 
 .partnerships p {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     color: #555;
     margin-bottom: 3rem;
     line-height: 1.6;
     max-width: 1000px;
     text-align: center;
-    margin: 0 auto 3rem;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .partnerships span{
@@ -97,3 +99,4 @@
 .partnerships img{
     max-width: 500px;
 }
+
