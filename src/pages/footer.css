@@ -1,0 +1,106 @@
+/* CSS */
+.footer {
+    width: 100vw;
+    background-color: #e2e2e2;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+    color: #000;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer-brand {
+    text-align: center;
+}
+
+.footer-brand .logo {
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.footer-brand .description {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-links h4 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 5px 0;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.compliance-list {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.social-icons a img {
+    width: 24px;
+    margin-right: 10px;
+}
+
+.footer-contact {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.footer-contact h5 {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.footer-apps {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.footer-apps img {
+    height: 40px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-contact {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

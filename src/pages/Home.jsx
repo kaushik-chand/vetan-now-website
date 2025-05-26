@@ -17,7 +17,9 @@ import "./partnerships.css";
 import dummy_company from "../img/dummy_comapny.png";
 import howitworks1 from "../img/howitwork1.png";
 import howitworks2 from "../img/howitwork2.png";
-
+import "./contact_us.css";
+import contact from "../img/contact.png";
+import './footer.css'
 
 const Home = () => {
   return (
@@ -286,7 +288,7 @@ const Home = () => {
       {/* Partnerships */}
 
       <div className="partnerships">
-      <img src={partnerships} alt="Partnerships" />
+        <img src={partnerships} alt="Partnerships" />
         <h1>
           Our <span>Partnerships</span>
         </h1>
@@ -341,6 +343,151 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      {/* contact us */}
+
+      <div className="contact-us">
+        <h1>
+          Get in <span>Touch</span>
+        </h1>
+
+        <div className="contact-us-container">
+          <div className="contact-text">
+            <p>
+              Have questions or want to learn more about{" "}
+              <strong>VetanNow</strong>? We’re here to help!
+            </p>
+            <div className="contact-info">
+              <div>
+                <i className="fas fa-envelope"></i>
+                <span>support@vetannow.com</span>
+              </div>
+              <div>
+                <i className="fas fa-phone-alt"></i>
+                <span>+91 98765 43210</span>
+              </div>
+              <div>
+                <i className="fas fa-map-marker-alt"></i>
+                <span>Bengaluru, India</span>
+              </div>
+            </div>
+            <img
+              src={contact}
+              alt="Contact Illustration"
+              className="contact-illustration"
+            />
+          </div>
+
+          <form className="contact-form">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      {/* foooter */}
+      <footer class="footer">
+        <div class="footer-container">
+          <div class="footer-brand">
+            <img src="your-logo-path.png" alt="VetanNow Logo" class="logo" />
+            <p class="description">
+              VetanNow is India’s financial wellness suite that enables
+              employees to build a foundation for financial well-being.
+            </p>
+          </div>
+
+          <div class="footer-links">
+            <div>
+              <h4>PRODUCTS</h4>
+              <ul>
+                <li>
+                  <a href="#">Salary On-Demand</a>
+                </li>
+                <li>
+                  <a href="#">Financial Coaching</a>
+                </li>
+                <li>
+                  <a href="#">Company</a>
+                </li>
+                <li>
+                  <a href="#">About Us</a>
+                </li>
+                <li>
+                  <a href="#">FAQs</a>
+                </li>
+                <li>
+                  <a href="#">Blog</a>
+                </li>
+                <li>
+                  <a href="#">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4>LEGAL</h4>
+              <ul>
+                <li>
+                  <a href="#">Privacy Policy</a>
+                </li>
+                <li>
+                  <a href="#">Data Policy</a>
+                </li>
+                <li>
+                  <a href="#">Terms</a>
+                </li>
+                <li>
+                  <a href="#">Financial Partners</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <ul class="compliance-list">
+                <li>✅ ISO 27001 certified</li>
+                <li>✅ Strict Data Privacy</li>
+                <li>✅ Labour Law compliant</li>
+              </ul>
+              <div class="social-icons">
+                <a href="#">
+                  <img src="insta.svg" alt="Instagram" />
+                </a>
+                <a href="#">
+                  <img src="twitter.svg" alt="Twitter" />
+                </a>
+                <a href="#">
+                  <img src="fb.svg" alt="Facebook" />
+                </a>
+                <a href="#">
+                  <img src="linkedin.svg" alt="LinkedIn" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-contact">
+            <div>
+              <h5>SALES</h5>
+              <p>queries@vetannow.com</p>
+            </div>
+            <div>
+              <h5>MEDIA</h5>
+              <p>media@vetannow.com</p>
+            </div>
+            <div>
+              <h5>CUSTOMER SERVICE</h5>
+              <p>support@vetannow.com</p>
+            </div>
+          </div>
+
+          <div class="footer-apps">
+            <img src="app-store.png" alt="App Store" />
+            <img src="play-store.png" alt="Google Play" />
+            <img src="whatsapp.png" alt="WhatsApp" />
+            <img src="web-app.png" alt="Web App" />
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
