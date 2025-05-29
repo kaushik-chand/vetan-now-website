@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar.jsx'
 import Home from './pages/Home.jsx'
 import './App.css'
+import Employee from './pages/Employee.jsx'
+import Footer from './pages/Footer.jsx'
 
 const App = () => {
   return (
@@ -11,6 +13,8 @@ const App = () => {
       <Routes>
 
         <Route path="/" element={<Home />} />
+        <Route path="/services/employee" element={<Employee />} />
+
         {/* <Route path="/" element={<Home />} />
         <Route path="/who-we-are" element={<WhoWeAre />} />
         <Route path="/how-we-work" element={<HowWeWork />} />
@@ -19,7 +23,7 @@ const App = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} /> */}
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </Router>
   )
 }
