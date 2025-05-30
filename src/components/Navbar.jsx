@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../img/logo.png";
 import { NavLink, useLocation } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
+
 
 
 const Navbar = () => {
@@ -59,12 +61,13 @@ const Navbar = () => {
           >
             Partners
           </NavLink>
-          <NavLink
-            to="/who-we-are"
+          <NavHashLink
+            smooth
+            to="/#who-we-are"
             className={({ isActive }) => (isActive ? "active" : "")}
           >
-            About us
-          </NavLink>
+            About Us
+          </NavHashLink>
           <NavLink
             to="/careers"
             className={({ isActive }) => (isActive ? "active" : "")}

@@ -116,7 +116,7 @@ const Home = () => {
         </div>
       </div>
       {/* WHO WE ARE SECTION */}
-      <div className="who-we-are">
+      <div className="who-we-are" id="who-we-are">
         <div className="who-we-are-container">
           <div className="left-content">
             <h2>Who We Are</h2>
