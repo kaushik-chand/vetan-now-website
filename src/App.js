@@ -5,6 +5,7 @@ import Home from './pages/Home.jsx'
 import './App.css'
 import Employee from './pages/Employee.jsx'
 import Footer from './pages/Footer.jsx'
+import Employer from './pages/Employer.jsx'
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
 
         <Route path="/" element={<Home />} />
         <Route path="/services/employee" element={<Employee />} />
+        <Route path="/services/employer" element={<Employer />} />
 
         {/* <Route path="/" element={<Home />} />
         <Route path="/who-we-are" element={<WhoWeAre />} />
