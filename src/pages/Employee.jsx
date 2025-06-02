@@ -19,17 +19,17 @@ import playstore from "../img/playstore.png";
 import appstore from "../img/appstore.png";
 
 const Employee = () => {
-    const scrollRef = useRef(null);
+  const scrollRef = useRef(null);
 
-    const scroll = (direction) => {
-      if (scrollRef.current) {
-        const scrollAmount = 320; // Adjust based on video width + gap
-        scrollRef.current.scrollBy({
-          left: direction === "left" ? -scrollAmount : scrollAmount,
-          behavior: "smooth",
-        });
-      }
-    };
+  const scroll = (direction) => {
+    if (scrollRef.current) {
+      const scrollAmount = 320; // Adjust based on video width + gap
+      scrollRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
   return (
     <div className="employee-container">
       <div className="banner">
@@ -98,7 +98,7 @@ const Employee = () => {
         <div className="left">
           <h1>Tell your employer you want on-demand pay</h1>
           <p>
-            Your employer can integrate with Crediito easily and atno cost. Let
+            Your employer can integrate with VetanNow easily and atno cost. Let
             themknow you'd like earned waged access by getting in touch with us.
           </p>
           <button className="demo-button">Get in Touch</button>
@@ -108,7 +108,7 @@ const Employee = () => {
         </div>
       </div>
       <div className="Testimonials">
-        <h1>Why employees love Crediito?</h1>
+        <h1>Why employees love VetanNow?</h1>
 
         <h4>
           <img src={star} alt="Employee Icon" />

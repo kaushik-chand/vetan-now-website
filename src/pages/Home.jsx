@@ -20,8 +20,6 @@ import howitworks2 from "../img/howitwork2.png";
 import "./contact_us.css";
 import contact from "../img/contact.png";
 
-
-
 const Home = () => {
   return (
     <div className="home-container">
@@ -317,7 +315,7 @@ const Home = () => {
           <br />
           Business Performance Review of key contracts, industry trends and
           assets to understand ability of employer partner to settle payments
-          disbursements incurred Crediito.
+          disbursements incurred VetanNow.
           <br />
           <br />
           <span className="highlight">
@@ -387,8 +385,6 @@ const Home = () => {
           </form>
         </div>
       </div>
-
-     
     </div>
   );
 };

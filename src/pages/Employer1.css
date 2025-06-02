@@ -27,7 +27,7 @@
 }
 
 .employer-container .banner h4 {
-    font-size: 28px;
+    font-size: 2rem;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -148,9 +148,20 @@
         margin-top: 60px;
     }
 
-    .employer-container .banner .banner-content .left h1 {
-        font-size: 28px;
+    .employer-container .banner   h1 {
+        font-size: 25px;
+        text-align: center;
     }
+    .employer-container .banner   h4 {
+        font-size: 18px;
+        text-align: center;
+    }
+    .employer-container .banner   img {
+        width: 100px;
+        height: auto;
+    }
+
+
 
     .employer-container .banner .banner-content .left p {
         font-size: 16px;
@@ -160,11 +171,7 @@
         width: 90%;
     }
 
-    .employer-container .banner .banner-content .left h4 {
-        font-size: 20px;
-    }
+    
 
-    .employer-container .banner .banner-content .left h4 img {
-        max-width: 40px;
-    }
+   
 }
