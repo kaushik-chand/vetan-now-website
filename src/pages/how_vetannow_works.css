@@ -66,30 +66,34 @@
 }
 
 
-
 .how_vetannow_works_container .col li {
     display: flex;
     align-items: center;
-    /* changed from flex-start to center */
-    gap: 15px;
-    margin: 20px auto;
-    font-size: 1.1rem;
+    gap: 18px;
+    margin: 24px auto;
+    font-size: 1.15rem;
     color: #000000;
     font-weight: 700;
     line-height: 1.6;
     list-style: none;
-    background: #fff;
-    border-radius: 12px;
-    padding: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 16px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     width: 100%;
-    max-width: 350px;
+    max-width: 360px;
     text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.how_vetannow_works_container .col li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
 
 .how_vetannow_works_container .col li img {
-    width: 50px;
-    margin-top: 5px;
+    width: 100px;
+    margin-top: 0;
     flex-shrink: 0;
 }
 

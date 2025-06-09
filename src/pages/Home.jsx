@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import rightImage from "../img/Home_Banner_Img.png";
 import "./Home.css";
 import "./how_itworks.css";
@@ -22,6 +22,7 @@ import contact from "../img/contact.png";
 import { Link } from "react-router-dom";
 
 const Home = () => {
+  const [showModal, setShowModal] = useState(false);
   return (
     <div className="home-container">
       <div className="banner">
@@ -152,18 +153,61 @@ const Home = () => {
         </h1>
 
         <div className="meet_our_team_container">
-          <div className="card">
-            <img src={avatar} alt="Team Member 1" />
+          <div className="card" onClick={() => setShowModal(true)}>
+            <img src={avatar} alt="Manish Shukla" />
             <h3>Manish Shukla</h3>
             <p>
-              John Doe is the CEO of VetanNow. He has over 10 years of
-              experience
+              Manish Shukla is the Founder & CEO of VetanNow, with 10+ years in
+              fintech and digital lending.
             </p>
-            <h4>CEO</h4>
-            {/* des */}
+            <h4>Founder & CEO</h4>
+            <button
+              className="linkedin-btn"
+              onClick={(e) => {
+                e.stopPropagation();
+                window.open(
+                  "https://www.linkedin.com/in/manish-shukla",
+                  "_blank"
+                );
+              }}
+            >
+              LinkedIn
+            </button>
           </div>
-         
         </div>
+
+        {showModal && (
+          <div className="modal_overlay" onClick={() => setShowModal(false)}>
+            <div className="modal_content" onClick={(e) => e.stopPropagation()}>
+              <h2>Manish Shukla – Founder & CEO</h2>
+              <p>
+                A second-time fintech founder with deep insight into India’s
+                evolving financial landscape, Manish brings hands-on experience
+                from building and scaling digital lending products in Bharat. In
+                2018, he launched SalaryDost, a bootstrapped digital lending
+                platform that served thousands of salaried individuals and
+                survived through COVID—offering a front-row seat to the
+                liquidity challenges faced by India’s working population.
+                <br />
+                <br />
+                Prior to his entrepreneurial journey, Manish worked with a
+                public policy think tank, gaining exposure to systemic
+                challenges around financial inclusion and labor economics. This
+                unique blend of grassroots insight and fintech execution has
+                shaped his conviction in building VetanNow—a scalable,
+                compliance-ready platform designed to solve income timing gaps
+                for millions.
+                <br />
+                <br />
+                At VetanNow, Manish brings not just founder resilience but also
+                a deep product intuition, proven learning agility, and a bold
+                vision: to reimagine salary access for the 400M-strong Indian
+                workforce—with dignity, speed, and technology at its core.
+              </p>
+              <button onClick={() => setShowModal(false)}>Close</button>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Partnerships */}

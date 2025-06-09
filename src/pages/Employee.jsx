@@ -61,7 +61,7 @@ const Employee = () => {
           <button
             className="demo-button"
             onClick={handleDownloadClick}
-            style={{ background: themeColor }}
+           
           >
             Download VentanNow
           </button>
@@ -129,6 +129,7 @@ const Employee = () => {
           <img src={Getintouch} alt="Get in Touch" />
         </div>
       </div>
+
       {/* <div className="Testimonials">
         <h1>Why employees love VetanNow?</h1>
 
@@ -193,7 +194,6 @@ const Employee = () => {
           <button
             className="demo-button"
             onClick={handleDownloadClick}
-            style={{ background: themeColor }}
           >
             <img src={playstore} alt="playstore" />
             Download on Playstore
@@ -201,7 +201,6 @@ const Employee = () => {
           <button
             className="demo-button"
             onClick={handleDownloadClick}
-            style={{ background: themeColor }}
           >
             <img src={appstore} alt="playstore" />
             Download on App Store
