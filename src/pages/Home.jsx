@@ -19,6 +19,7 @@ import howitworks1 from "../img/howitwork1.png";
 import howitworks2 from "../img/howitwork2.png";
 import "./contact_us.css";
 import contact from "../img/contact.png";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -36,7 +37,9 @@ const Home = () => {
             partnering firms to access a portion of their earned, accrued pay on
             demand
           </p>
-          <button className="demo-button">Request Demo</button>
+          <a href="/#contact-us" className="btn">
+            <button className="demo-button">Request Demo</button>
+          </a>
         </div>
         <div className="right">
           <img src={rightImage} alt="Home Banner" />
@@ -119,8 +122,8 @@ const Home = () => {
           <div className="left-content">
             <h2>Who We Are</h2>
             <p>
-              Over <strong>XX%</strong> of Indians live paycheck to paycheck.{" "}
-              <br />
+              Over more than <strong>77%</strong> of Indians live paycheck to
+              paycheck. <br />
               Nearly half will not be able to handle an unexpected expense.{" "}
               <br />
               With workers and their families operating on such tight budgets,
@@ -151,7 +154,7 @@ const Home = () => {
         <div className="meet_our_team_container">
           <div className="card">
             <img src={avatar} alt="Team Member 1" />
-            <h3>John Doe</h3>
+            <h3>Manish Shukla</h3>
             <p>
               John Doe is the CEO of VetanNow. He has over 10 years of
               experience
@@ -159,128 +162,7 @@ const Home = () => {
             <h4>CEO</h4>
             {/* des */}
           </div>
-          <div className="card">
-            <img src={avatar} alt="Team Member 2" />
-            <h3>Jane Smith</h3>
-            <p>
-              Jane Smith is the CTO of VetanNow. She has a background in
-              technology and finance.
-            </p>
-            <h4>CTO</h4>
-          </div>
-          <div className="card">
-            <img src={avatar} alt="Team Member 3" />
-            <h3>Mike Johnson</h3>
-            <p>
-              Mike Johnson is the CFO of VetanNow. He has extensive experience
-              in financial management.
-            </p>
-            <h4>CFO</h4>
-          </div>
-          {/* <div className="card">
-            <img src={step4} alt="Team Member 4" />
-            <h3>Emily Davis</h3>
-            <p>
-              Emily Davis is the COO of VetanNow. She has a strong background in
-              operations and management.
-            </p>
-            <h4>COO</h4>
-          </div> */}
-        </div>
-      </div>
-
-      {/* Advisory panel */}
-
-      <div className="advisory-panel">
-        <h1>
-          Meet Our <span>Advisory Panel</span>
-        </h1>
-
-        <div className="advisory-panel-container">
-          <div className="card">
-            <img src={avatar} alt="Team Member 1" />
-            <h3>John Doe</h3>
-            <p>
-              John Doe is the CEO of VetanNow. He has over 10 years of
-              experience
-            </p>
-            <h4>CEO</h4>
-            {/* des */}
-          </div>
-          <div className="card">
-            <img src={avatar} alt="Team Member 2" />
-            <h3>Jane Smith</h3>
-            <p>
-              Jane Smith is the CTO of VetanNow. She has a background in
-              technology and finance.
-            </p>
-            <h4>CTO</h4>
-          </div>
-          <div className="card">
-            <img src={avatar} alt="Team Member 3" />
-            <h3>Mike Johnson</h3>
-            <p>
-              Mike Johnson is the CFO of VetanNow. He has extensive experience
-              in financial management.
-            </p>
-            <h4>CFO</h4>
-          </div>
-          {/* <div className="card">
-            <img src={step4} alt="Team Member 4" />
-            <h3>Emily Davis</h3>
-            <p>
-              Emily Davis is the COO of VetanNow. She has a strong background in
-              operations and management.
-            </p>
-            <h4>COO</h4>
-          </div> */}
-        </div>
-      </div>
-
-      {/* Mentor panel */}
-      <div className="mentor-panel">
-        <h1>
-          Meet Our <span>Mentor Panel</span>
-        </h1>
-
-        <div className="mentor-panel-container">
-          <div className="card">
-            <img src={avatar} alt="Team Member 1" />
-            <h3>John Doe</h3>
-            <p>
-              John Doe is the CEO of VetanNow. He has over 10 years of
-              experience
-            </p>
-            <h4>CEO</h4>
-            {/* des */}
-          </div>
-          <div className="card">
-            <img src={avatar} alt="Team Member 2" />
-            <h3>Jane Smith</h3>
-            <p>
-              Jane Smith is the CTO of VetanNow. She has a background in
-              technology and finance.
-            </p>
-            <h4>CTO</h4>
-          </div>
-          <div className="card">
-            <img src={avatar} alt="Team Member 3" />
-            <h3>Mike Johnson</h3>
-            <p>
-              Mike Johnson is the CFO of VetanNow. He has extensive experience
-              in financial management.
-            </p>
-            <h4>CFO</h4>
-          </div>
-          {/* <div className="card">
-            <img src={step4} alt="Team Member 4" />
-            <h3>Emily Davis</h3>
-            <p>
-              Emily Davis is the COO of VetanNow. She has a strong background in
-              operations and management.
-            </p>
-            <h4>COO</h4>
-          </div> */}
+         
         </div>
       </div>
 
@@ -345,7 +227,7 @@ const Home = () => {
 
       {/* contact us */}
 
-      <div className="contact-us">
+      <div className="contact-us" id="contact-us">
         <h1>
           Get in <span>Touch</span>
         </h1>

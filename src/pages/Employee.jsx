@@ -30,6 +30,17 @@ const Employee = () => {
       });
     }
   };
+  const [showPopup, setShowPopup] = React.useState(false);
+
+  const handleDownloadClick = (e) => {
+    e.preventDefault();
+    setShowPopup(true);
+  };
+
+  const closePopup = () => setShowPopup(false);
+
+  const themeColor = "#d40602";
+
   return (
     <div className="employee-container">
       <div className="banner">
@@ -47,7 +58,13 @@ const Employee = () => {
             With VetanNow you have access to your earned, accrued pay as you
             need it.
           </p>
-          <button className="demo-button">Download VentanNow</button>
+          <button
+            className="demo-button"
+            onClick={handleDownloadClick}
+            style={{ background: themeColor }}
+          >
+            Download VentanNow
+          </button>
         </div>
         <div className="right">
           <img src={rightImage} alt="Home Banner" />
@@ -76,7 +93,7 @@ const Employee = () => {
             </li>
           </div>
           <div className="col">
-            {/* 3 li 1.Easy access to liquidity 2. Timely availability of funds 3.Hassle-free paperwork */}
+            {/* 3 li 1.No high interest charges 2. Get financial coaching 3. Multilingual support */}
             <li>
               <img src={percentage} alt="availability" />
               No high interest charges
@@ -101,13 +118,18 @@ const Employee = () => {
             Your employer can integrate with VetanNow easily and atno cost. Let
             themknow you'd like earned waged access by getting in touch with us.
           </p>
-          <button className="demo-button">Get in Touch</button>
+          <button
+            className="demo-button"
+            style={{ background: themeColor }}
+          >
+            Get in Touch
+          </button>
         </div>
         <div className="right">
           <img src={Getintouch} alt="Get in Touch" />
         </div>
       </div>
-      <div className="Testimonials">
+      {/* <div className="Testimonials">
         <h1>Why employees love VetanNow?</h1>
 
         <h4>
@@ -155,7 +177,7 @@ const Employee = () => {
             &#10095;
           </button>
         </div>
-      </div>
+      </div> */}
       <div className="Ready_to_get_started">
         <h1>
           Ready to get started with <span>VetanNow</span>?
@@ -168,16 +190,69 @@ const Employee = () => {
         </p>
         <div className="buttons">
           {/* playstore and app store */}
-          <button className="demo-button">
+          <button
+            className="demo-button"
+            onClick={handleDownloadClick}
+            style={{ background: themeColor }}
+          >
             <img src={playstore} alt="playstore" />
             Download on Playstore
           </button>
-          <button className="demo-button">
+          <button
+            className="demo-button"
+            onClick={handleDownloadClick}
+            style={{ background: themeColor }}
+          >
             <img src={appstore} alt="playstore" />
             Download on App Store
           </button>
         </div>
       </div>
+      {showPopup && (
+        <div
+          className="popup-overlay"
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: "rgba(0,0,0,0.4)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            zIndex: 9999,
+          }}
+        >
+          <div
+            className="popup-content"
+            style={{
+              background: "#fff",
+              padding: "2rem",
+              borderRadius: "8px",
+              textAlign: "center",
+              minWidth: "280px",
+            }}
+          >
+            <h2 style={{ color: themeColor }}>App is coming soon</h2>
+            <p>Stay tuned!</p>
+            <button
+              onClick={closePopup}
+              style={{
+                marginTop: "1rem",
+                padding: "0.5rem 1.5rem",
+                border: "none",
+                background: themeColor,
+                color: "#fff",
+                borderRadius: "4px",
+                cursor: "pointer",
+              }}
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

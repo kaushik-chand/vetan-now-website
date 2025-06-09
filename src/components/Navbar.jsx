@@ -5,13 +5,10 @@ import logo from "../img/logo.png";
 import { NavLink, useLocation } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 
-
-
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
   const isServicesActive = location.pathname.startsWith("/services");
-
 
   return (
     <>
@@ -35,7 +32,7 @@ const Navbar = () => {
             Home
           </NavLink>
 
-          <div className="dropdown">Products ▾</div>
+          {/* <div className="dropdown">Products ▾</div> */}
 
           <div className={`dropdown ${isServicesActive ? "active" : ""}`}>
             Services ▾
@@ -55,12 +52,12 @@ const Navbar = () => {
             </div>
           </div>
 
-          <NavLink
+          {/* <NavLink
             to="/partners"
             className={({ isActive }) => (isActive ? "active" : "")}
           >
             Partners
-          </NavLink>
+          </NavLink> */}
           <NavHashLink
             smooth
             to="/#who-we-are"
@@ -68,20 +65,31 @@ const Navbar = () => {
           >
             About Us
           </NavHashLink>
-          <NavLink
+          {/* <NavLink
             to="/careers"
             className={({ isActive }) => (isActive ? "active" : "")}
           >
             Careers
-          </NavLink>
-          <NavLink
+          </NavLink> */}
+          {/* <NavLink
             to="/blog"
             className={({ isActive }) => (isActive ? "active" : "")}
           >
             Blogs
-          </NavLink>
+          </NavLink> */}
 
-          <button className="demo-button">Request Demo</button>
+          <NavHashLink
+            smooth
+            // className="demo-button"
+            to="/#contact-us"
+            className=""
+            style={{
+              border: "none",
+              "background-color": "none",
+            }}
+          >
+            <button className="demo-button">Request Demo</button>
+          </NavHashLink>
         </div>
 
         <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>

@@ -11,6 +11,7 @@ body {
   /* overflow: hidden; */
   overflow-x: hidden;
     /* Optional safeguard */
+    scroll-behavior: smooth;
 }
 
 .demo-button {

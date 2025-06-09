@@ -22,6 +22,7 @@ import zero from "../img/0-percent (1).png";
 import integration from "../img/integration.png";
 import nochanges from "../img/nochange.png";
 import risk from "../img/risk.png";
+import { NavHashLink } from "react-router-hash-link";
 
 const Employer = () => {
   const scrollRef = useRef(null);
@@ -133,10 +134,22 @@ const Employer = () => {
             Download our corporate brochure to improve the financial wellness of
             your employees
           </p>
-          <button className="demo-button">Download</button>
+
+          <NavHashLink
+            smooth
+            // className="demo-button"
+            to="/#contact-us"
+            className=""
+            style={{
+              border: "none",
+              "background-color": "none",
+            }}
+          >
+            <button className="demo-button">Request Demo</button>
+          </NavHashLink>
         </div>
       </div>
-      <div className="Testimonials">
+      {/* <div className="Testimonials">
         <h1>Why businesses love VetanNow?</h1>
 
         <h4>
@@ -184,7 +197,7 @@ const Employer = () => {
             &#10095;
           </button>
         </div>
-      </div>
+      </div> */}
       <div className="Ready_to_get_started">
         <h1>
           Ready to get started with <span>VetanNow</span>?
@@ -196,15 +209,18 @@ const Employer = () => {
           partnered with VetanNow
         </p>
         <div className="buttons">
-          {/* playstore and app store */}
-          <button className="demo-button">
-            <img src={playstore} alt="playstore" />
-            Download on Playstore
-          </button>
-          <button className="demo-button">
-            <img src={appstore} alt="playstore" />
-            Download on App Store
-          </button>
+          <NavHashLink
+            smooth
+            // className="demo-button"
+            to="/#contact-us"
+            className=""
+            style={{
+              border: "none",
+              "background-color": "none",
+            }}
+          >
+            <button className="demo-button">Request Demo</button>
+          </NavHashLink>
         </div>
       </div>
     </div>
