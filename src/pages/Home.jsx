@@ -21,8 +21,61 @@ import "./contact_us.css";
 import contact from "../img/contact.png";
 import { Link } from "react-router-dom";
 
+// contact us backend integration
+import { db } from "../config/firebase"; // Adjust path if needed
+import { collection, addDoc, Timestamp } from "firebase/firestore";
+
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
+
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    company: "",
+    hq: "",
+    designation: "",
+    companySize: "",
+    phone: "",
+  });
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("Sending...");
+
+    try {
+      await addDoc(collection(db, "contactMessages"), {
+        ...formData,
+        timestamp: Timestamp.now(),
+      });
+      setStatus("Message sent successfully ✅");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        company: "",
+        hq: "",
+        designation: "",
+        companySize: "",
+        phone: "",
+      });
+    } catch (error) {
+      console.error("Error sending message: ", error);
+      setStatus("Failed to send message ❌");
+    }
+  };
+
+
+
   return (
     <div className="home-container">
       <div className="banner">
@@ -282,6 +335,12 @@ const Home = () => {
               Have questions or want to learn more about{" "}
               <strong>VetanNow</strong>? We’re here to help!
             </p>
+            <p className="extra-text">
+              Whether you’re an MSME owner, HR manager, or simply curious about
+              how Earned Wage Access can help your workforce — our team is just
+              a message away. Reach out for partnerships, demos, or to just
+              explore financial wellness for your employees.
+            </p>
             <div className="contact-info">
               <div>
                 <i className="fas fa-envelope"></i>
@@ -296,18 +355,93 @@ const Home = () => {
                 <span>Bengaluru, India</span>
               </div>
             </div>
-            <img
+            {/* <img
               src={contact}
               alt="Contact Illustration"
               className="contact-illustration"
-            />
+            /> */}
           </div>
 
-          <form className="contact-form">
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
-            <textarea placeholder="Your Message" required></textarea>
+          <form className="contact-form" onSubmit={handleSubmit}>
+            <div className="form-columns">
+              <div className="form-column">
+                <input
+                  type="text"
+                  name="firstName"
+                  placeholder="First Name"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Business Email Address"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="text"
+                  name="hq"
+                  placeholder="Headquarter Name"
+                  value={formData.hq}
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="text"
+                  name="designation"
+                  placeholder="Your Designation"
+                  value={formData.designation}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
+              <div className="form-column">
+                <input
+                  type="text"
+                  name="lastName"
+                  placeholder="Last Name"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  required
+                />
+                <input
+                  type="text"
+                  name="company"
+                  placeholder="Company Name"
+                  value={formData.company}
+                  onChange={handleChange}
+                  required
+                />
+                <select
+                  name="companySize"
+                  value={formData.companySize}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Your Company Size</option>
+                  <option value="1-10">1–10 employees</option>
+                  <option value="11-50">11–50 employees</option>
+                  <option value="51-200">51–200 employees</option>
+                  <option value="201-500">201–500 employees</option>
+                  <option value="500+">500+ employees</option>
+                </select>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+
             <button type="submit">Send Message</button>
+            {status && <p className="form-status">{status}</p>}
           </form>
         </div>
       </div>

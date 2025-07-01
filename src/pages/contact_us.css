@@ -145,3 +145,52 @@
 .contact-form button:active {
     transform: scale(0.98);
 }
+
+.contact-text .extra-text {
+    margin-top: 20px;
+    font-size: 1.05rem;
+    color: #444;
+    line-height: 1.75;
+    font-style: italic;
+}
+
+/* Form column layout */
+.form-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form select {
+    width: 100%;
+    padding: 16px 20px;
+    border: 1px solid #eee;
+    border-radius: 14px;
+    font-size: 1rem;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+}
+
+.contact-form select:focus {
+    border-color: #ff3b3f;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(255, 59, 63, 0.15);
+    outline: none;
+}
+
+@media (min-width: 768px) {
+    .form-columns {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .form-column {
+        flex: 1;
+    }
+}
