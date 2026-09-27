@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import rightImage from "../img/employer1.png";
 import "./Employer1.css";
 import "./Employer2.css";
@@ -6,18 +6,11 @@ import "./employer3.css";
 import empolyee from "../img/employer.png";
 import access from "../img/access.png";
 import availability from "../img/availability.png";
-import paperwork from "../img/paperwork.png";
 import percentage from "../img/percentage.png";
 import coaching from "../img/coaching.png";
-import multilingual from "../img/multilingual.png";
 import bg from "../img/employee2.png";
 import "./employer4.css";
-import Getintouch from "../img/Get in touch.png";
-import "./Testimonials.css";
-import star from "../img/star.png";
 import "./Ready_to_get_started.css";
-import playstore from "../img/playstore.png";
-import appstore from "../img/appstore.png";
 import zero from "../img/0-percent (1).png";
 import integration from "../img/integration.png";
 import nochanges from "../img/nochange.png";
@@ -25,17 +18,6 @@ import risk from "../img/risk.png";
 import { NavHashLink } from "react-router-hash-link";
 
 const Employer = () => {
-  const scrollRef = useRef(null);
-
-  const scroll = (direction) => {
-    if (scrollRef.current) {
-      const scrollAmount = 320; // Adjust based on video width + gap
-      scrollRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
-        behavior: "smooth",
-      });
-    }
-  };
   return (
     <div className="employer-container">
       <div className="banner">

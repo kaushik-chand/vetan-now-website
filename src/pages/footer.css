@@ -117,7 +117,15 @@
     margin-top: 1rem;
 }
 
-.footer .right .col .social-icons a img {
+.footer .right .col .social-icons button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    line-height: 0;
+}
+
+.footer .right .col .social-icons button img {
     width: 24px;
     height: 24px;
     transition: transform 0.3s ease;
