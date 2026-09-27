@@ -1,0 +1,174 @@
+.partnerships {
+    text-align: center;
+    padding: 5rem 2rem;
+    height: auto;
+    
+}
+
+
+
+.partnerships h1 {
+    font-size: 3rem;
+    color: #222;
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0 1rem;
+}
+
+.partnerships h1 span {
+    color: #ff5757;
+    font-weight: 800;
+}
+
+.partnerships p {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    max-width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.partnerships span{
+    color: #ff5757;
+    font-weight: 600;
+}
+
+/* second  span */
+.partnerships .highlight{
+    color: #000000;
+    font-weight: 600;
+    font-style: italic;
+}
+.partnerships>img {
+    max-width: 180px;
+    margin: 0 auto 2.5rem;
+    display: block;
+}
+
+.partnerships-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    padding: 2rem;
+}
+
+.partnerships-container .card {
+    background: #ffffff9e;
+    border: none;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    width: 300px;
+    box-shadow: 0 10px 25px rgba(255, 87, 87, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.partnerships-container .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(255, 87, 87, 0.25);
+}
+
+.partnerships-container .card img {
+    max-width: 100px;
+    margin-bottom: 1.2rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.partnerships-container .card h3 {
+    color: #ff5757;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.partnerships-container .card p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.partnerships img{
+    max-width: 500px;
+}
+
+
+
+@media (max-width: 1024px) {
+    .partnerships h1 {
+        font-size: 2.5rem;
+    }
+
+    .partnerships p {
+        font-size: 1.3rem;
+    }
+
+    .partnerships-container {
+        gap: 2rem;
+    }
+
+    .partnerships-container .card {
+        width: 250px;
+        padding: 2rem 1.5rem;
+    }
+
+    .partnerships img {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .partnerships {
+        padding: 3rem 1.5rem;
+    }
+
+    .partnerships h1 {
+        font-size: 2rem;
+    }
+
+    .partnerships p {
+        font-size: 1.1rem;
+    }
+
+    .partnerships-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 0;
+    }
+
+    .partnerships-container .card {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    .partnerships img {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .partnerships h1 {
+        font-size: 1.6rem;
+    }
+
+    .partnerships p {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .partnerships-container .card {
+        padding: 1.5rem 1rem;
+    }
+
+    .partnerships img {
+        max-width: 250px;
+    }
+}

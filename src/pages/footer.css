@@ -1,0 +1,222 @@
+.footer{
+    width: 100vw;
+    background-color: #d9d9d9;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #6c757d;
+    min-height: 50vh;
+}
+
+.footer .footer-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .footer-container .top{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .footer-container .top .left{
+    width: 30%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-top: 50px;;
+    
+}
+
+.footer .footer-container .top .left img{
+    max-width: 250px;
+}
+
+.footer .footer-container .top .left p{
+    font-size: 24px;
+    color: #000000;
+    margin-top: 40px;
+    text-align: left;
+
+    line-height: 1.5;
+    font-weight: bolder;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.footer .footer-container .top .right {
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+}
+
+.footer .right {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.footer .right .col {
+    min-width: 160px;
+    flex: 1;
+}
+
+.footer .right h3 {
+    font-size: 1.2rem;
+    color: #222;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.footer .right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.footer .right ul li {
+    font-size: 0.95rem;
+    color: #000000;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.footer .right ul li:hover {
+    color: #ff5757;
+}
+
+.footer .right hr {
+    height: 1px;
+    margin: 1rem 0;
+}
+
+.footer .right .col .social-icons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer .right .col .social-icons a img {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.footer .bottom{
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    gap: 40px;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.footer .bottom h4{
+    color: #ffffff;
+}
+
+.footer .bottom a{
+    color: #ffffff;
+    font-size: 14px;
+    margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .footer .footer-container .top {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 1rem;
+    }
+
+    .footer .footer-container .top .left,
+    .footer .footer-container .top .right {
+        width: 100%;
+        padding: 20px 0;
+        margin-top: 20px;
+    }
+
+    .footer .footer-container .top .left {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer .footer-container .top .left p {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    .footer .footer-container .top .left img {
+        max-width: 200px;
+    }
+
+    .footer .right {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .footer .right .col {
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .footer .right ul {
+        align-items: flex-start;
+    }
+
+    .footer .bottom {
+        flex-direction: column;
+        gap: 30px;
+        padding: 15px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer {
+        font-size: 12px;
+        padding: 15px;
+    }
+
+    .footer .footer-container .top .left p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .footer .footer-container .top .left img {
+        max-width: 150px;
+    }
+
+    .footer .bottom h4,
+    .footer .bottom a {
+        font-size: 12px;
+    }
+}

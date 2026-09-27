@@ -1,0 +1,158 @@
+.Testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    background: #fef4f5;
+    padding: 20px;
+    gap: 30px 20px;
+    border-radius: 12px;
+}
+
+.Testimonials h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f62b2f;
+    text-align: center;
+    position: relative;
+}
+
+.Testimonials h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #f62b2f;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.Testimonials h4{
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Testimonials h4 img{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.video-scroll-wrapper {
+    position: relative;
+    width: 90%;
+    display: flex;
+    align-items: center;
+
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background-color: rgba(246, 43, 47, 0.8);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 8px 14px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    display: none;
+}
+
+.scroll-btn:hover {
+    background-color: rgba(246, 43, 47, 1);
+}
+
+.scroll-btn.left {
+    left: 10px;
+}
+
+.scroll-btn.right {
+    right: 10px;
+}
+
+@media (min-width: 768px) {
+    .scroll-btn {
+        display: block;
+    }
+}
+
+.video-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 20px 0;
+    gap: 20px;
+    width: 100%;
+    scroll-behavior: smooth;
+}
+
+.video-container::-webkit-scrollbar {
+    display: none;
+}
+
+.video {
+    flex: 0 0 auto;
+    width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: center;
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.video iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .Testimonials h1 {
+        font-size: 2rem;
+    }
+
+    .video {
+        width: 250px;
+    }
+
+    .video iframe {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Testimonials h1 {
+        font-size: 1.75rem;
+    }
+
+    .video {
+        width: 220px;
+    }
+
+    .video iframe {
+        height: 160px;
+    }
+}

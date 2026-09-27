@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;800&display=swap');
+
+.employer-container {
+    font-family: 'Nunito', sans-serif;
+    padding: 20px;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: #f9f9f9;
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); */
+    border-radius: 12px;
+}
+
+.employer-container .banner {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: -150px;
+    gap: 10px;
+}
+
+.employer-container .banner h4 {
+    font-size: 2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #333;
+    margin: 0;
+}
+
+.employer-container .banner h4 img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.employer-container .banner h1 {
+    font-size: 60px;
+    font-weight: 800;
+    color: #000;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.employer-container .banner .banner-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    min-height: 300px;
+    gap: 40px;
+}
+
+.employer-container .banner .banner-content .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    width: 60%;
+    max-width: 700px;
+    transition: all 0.3s ease;
+}
+
+.employer-container .banner .banner-content .left p {
+    font-size: 22px;
+    color: #222;
+    font-weight: 600;
+    line-height: 1.6;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    text-align: justify;
+    margin: 0;
+}
+
+.employer-container .banner .banner-content .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+.employer-container .banner .banner-content .right img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.employer-container .banner .banner-content .right img:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .employer-container {
+        width: 90%;
+    }
+
+    .employer-container .banner {
+        flex-direction: column;
+        margin-top: 180px;
+        gap: 20px;
+    }
+
+    .employer-container .banner .banner-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .employer-container .banner .banner-content .left,
+    .employer-container .banner .banner-content .right {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .employer-container .banner .banner-content .left h1 {
+        font-size: 48px;
+    }
+
+    .employer-container .banner .banner-content .left p {
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .employer-container {
+        padding: 10px;
+        width: 95%;
+    }
+
+    .employer-container .banner {
+        margin-top: 60px;
+    }
+
+    .employer-container .banner   h1 {
+        font-size: 25px;
+        text-align: center;
+    }
+    .employer-container .banner   h4 {
+        font-size: 18px;
+        text-align: center;
+    }
+    .employer-container .banner   img {
+        width: 100px;
+        height: auto;
+    }
+
+
+
+    .employer-container .banner .banner-content .left p {
+        font-size: 16px;
+    }
+
+    .employer-container .banner .banner-content .right img {
+        width: 90%;
+    }
+
+    
+
+   
+}
