@@ -54,35 +54,18 @@ const Footer = () => {
 
             {/* social */}
             <div className="social-icons">
-              <a
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-               <img src={twitterIcon} alt="Twiter" />
-              </a>
-              <a
-                href=""
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-               <img src={instagramIcon} alt="Instagram" />
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src={facebookIcon} alt="facebook" />
-              </a>
-
-              <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              >
-                <img src={linkedinIcon} alt="LinkedIn" />
-              </a>
+              <button type="button" aria-label="Twitter">
+                <img src={twitterIcon} alt="" />
+              </button>
+              <button type="button" aria-label="Instagram">
+                <img src={instagramIcon} alt="" />
+              </button>
+              <button type="button" aria-label="Facebook">
+                <img src={facebookIcon} alt="" />
+              </button>
+              <button type="button" aria-label="LinkedIn">
+                <img src={linkedinIcon} alt="" />
+              </button>
             </div>
           </div>
         </div>

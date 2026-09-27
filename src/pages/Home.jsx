@@ -15,11 +15,7 @@ import "./mentor_panel.css";
 import partnerships from "../img/partnerships.png";
 import "./partnerships.css";
 import dummy_company from "../img/dummy_comapny.png";
-import howitworks1 from "../img/howitwork1.png";
-import howitworks2 from "../img/howitwork2.png";
 import "./contact_us.css";
-import contact from "../img/contact.png";
-import { Link } from "react-router-dom";
 
 // contact us backend integration
 import { db } from "../config/firebase"; // Adjust path if needed
@@ -165,9 +161,6 @@ const Home = () => {
               <img src={step4} alt="Payroll Integration" />
             </div>
           </div>
-          {/* <div className="how_itworks_image_down">
-            <img src={howitworks2} alt="How It Works" />
-          </div> */}
         </div>
       </div>
       {/* WHO WE ARE SECTION */}
@@ -355,11 +348,6 @@ const Home = () => {
                 <span>Bengaluru, India</span>
               </div>
             </div>
-            {/* <img
-              src={contact}
-              alt="Contact Illustration"
-              className="contact-illustration"
-            /> */}
           </div>
 
           <form className="contact-form" onSubmit={handleSubmit}>

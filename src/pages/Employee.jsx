@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import rightImage from "../img/employee1.png";
 import "./Employee.css";
 import empolyee from "../img/employee.png";
@@ -12,24 +12,11 @@ import multilingual from "../img/multilingual.png";
 import bg from "../img/employee2.png";
 import "./Get_in_touch.css";
 import Getintouch from "../img/Get in touch.png";
-import "./Testimonials.css";
-import star from "../img/star.png";
 import "./Ready_to_get_started.css";
 import playstore from "../img/playstore.png";
 import appstore from "../img/appstore.png";
 
 const Employee = () => {
-  const scrollRef = useRef(null);
-
-  const scroll = (direction) => {
-    if (scrollRef.current) {
-      const scrollAmount = 320; // Adjust based on video width + gap
-      scrollRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
-        behavior: "smooth",
-      });
-    }
-  };
   const [showPopup, setShowPopup] = React.useState(false);
 
   const handleDownloadClick = (e) => {
