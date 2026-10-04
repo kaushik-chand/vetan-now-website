@@ -7,7 +7,7 @@
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
-    background: #fef4f5;
+    background: var(--brand-soft);
     padding: 20px;
     gap: 30px 20px;
     border-radius: 12px;
@@ -16,7 +16,7 @@
 .Testimonials h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #f62b2f;
+    color: var(--brand);
     text-align: center;
     position: relative;
 }
@@ -26,7 +26,7 @@
     display: block;
     width: 80px;
     height: 4px;
-    background-color: #f62b2f;
+    background-color: var(--brand);
     margin: 10px auto 0;
     border-radius: 2px;
 }

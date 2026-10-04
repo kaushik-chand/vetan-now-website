@@ -30,10 +30,10 @@
 
 .left-content h2 {
     font-size: 2.5rem;
-    color: #ff5757;
+    color: var(--brand);
     margin-bottom: 24px;
     font-weight: 700;
-    border-left: 6px solid #ff5757;
+    border-left: 6px solid var(--brand);
     padding-left: 12px;
 }
 
@@ -45,11 +45,11 @@
 }
 
 .left-content strong {
-    color: #ff5757;
+    color: var(--brand);
 }
 
 .left-content .highlight {
-    color: #ff5757;
+    color: var(--brand);
     font-weight: bold;
 }
 
@@ -70,4 +70,21 @@
 
 .right-image img:hover {
     transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .who-we-are-container {
+        padding: 24px 8px;
+    }
+
+    .left-content,
+    .right-image {
+        min-width: 0;
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .left-content h2 {
+        font-size: 2rem;
+    }
 }

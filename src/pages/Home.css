@@ -20,7 +20,7 @@
     gap: 30px;
     width: 100%;
     max-width: 1200px;
-    margin-top: -100px;
+    margin-top: 0;
     /* adjust in responsive design */
 }
 
@@ -49,7 +49,7 @@
 
 .banner .left h2 span {
     font-weight: 600;
-    color: #ff5757;
+    color: var(--brand);
     font-size: 36px;
     font-style: italic;
     font-weight: bolder;
@@ -88,7 +88,7 @@
 @media (max-width: 1024px) {
     .banner {
         flex-direction: column;
-        margin-top: 180px;
+        margin-top: 24px;
         gap: 20px;
     }
 
@@ -128,7 +128,7 @@
     }
 
     .banner {
-        margin-top: 60px;
+        margin-top: 16px;
         gap: 15px;
     }
 

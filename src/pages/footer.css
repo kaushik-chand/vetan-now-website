@@ -1,5 +1,14 @@
+.footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: var(--brand);
+}
+
 .footer{
-    width: 100vw;
+    width: 100%;
     background-color: #d9d9d9;
     padding: 20px;
     text-align: center;
@@ -103,7 +112,7 @@
 }
 
 .footer .right ul li:hover {
-    color: #ff5757;
+    color: var(--brand);
 }
 
 .footer .right hr {
@@ -117,7 +126,7 @@
     margin-top: 1rem;
 }
 
-.footer .right .col .social-icons button {
+.footer .right .col .social-icons a {
     background: none;
     border: none;
     padding: 0;
@@ -125,7 +134,7 @@
     line-height: 0;
 }
 
-.footer .right .col .social-icons button img {
+.footer .right .col .social-icons a img {
     width: 24px;
     height: 24px;
     transition: transform 0.3s ease;
@@ -209,7 +218,16 @@
 }
 
 @media screen and (max-width: 600px) {
-    .footer {
+    .footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: var(--brand);
+}
+
+.footer {
         font-size: 12px;
         padding: 15px;
     }

@@ -1,7 +1,7 @@
 import React from "react";
-import rightImage from "../img/employee1.png";
+import rightImage from "../img/employee1.webp";
 import "./Employee.css";
-import empolyee from "../img/employee.png";
+import empolyee from "../img/employee.webp";
 import "./how_vetannow_works.css";
 import access from "../img/access.png";
 import availability from "../img/availability.png";
@@ -9,12 +9,14 @@ import paperwork from "../img/paperwork.png";
 import percentage from "../img/percentage.png";
 import coaching from "../img/coaching.png";
 import multilingual from "../img/multilingual.png";
-import bg from "../img/employee2.png";
+import bg from "../img/employee2.webp";
 import "./Get_in_touch.css";
-import Getintouch from "../img/Get in touch.png";
+import Getintouch from "../img/Get in touch.webp";
 import "./Ready_to_get_started.css";
 import playstore from "../img/playstore.png";
 import appstore from "../img/appstore.png";
+import { NavHashLink } from "react-router-hash-link";
+import Seo from "../components/Seo";
 
 const Employee = () => {
   const [showPopup, setShowPopup] = React.useState(false);
@@ -30,6 +32,11 @@ const Employee = () => {
 
   return (
     <div className="employee-container">
+      <Seo
+        title="Employees | VetanNow"
+        description="Access earned wages before payday with VetanNow. Pay bills on time and avoid waiting for the next salary cycle."
+        path="/services/employee"
+      />
       <div className="banner">
         <div className="left">
           <h4>
@@ -105,12 +112,14 @@ const Employee = () => {
             Your employer can integrate with VetanNow easily and atno cost. Let
             themknow you'd like earned waged access by getting in touch with us.
           </p>
-          <button
+          <NavHashLink
+            smooth
+            to="/#contact-us"
             className="demo-button"
             style={{ background: themeColor }}
           >
             Get in Touch
-          </button>
+          </NavHashLink>
         </div>
         <div className="right">
           <img src={Getintouch} alt="Get in Touch" />
