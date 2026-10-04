@@ -48,7 +48,7 @@
 }
 
 .Request_Demo .demo-button{
-    background-color: #000000;
+    background-color: var(--brand);
     color: #fff;
     padding: 10px 20px;
     border: none;

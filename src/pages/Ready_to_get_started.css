@@ -40,7 +40,7 @@
     padding: 10px 20px;
     font-size: 1rem;
     color: #fff;
-    background-color: #000;
+    background-color: var(--brand);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -51,7 +51,7 @@
 }
 
 .Ready_to_get_started .buttons button:hover {
-    background-color: #333;
+    background-color: var(--brand-hover);
 }
 
 .Ready_to_get_started .buttons button img {

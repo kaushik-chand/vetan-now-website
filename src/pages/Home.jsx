@@ -1,39 +1,37 @@
 import React, { useState } from "react";
-import rightImage from "../img/Home_Banner_Img.png";
+import rightImage from "../img/Home_Banner_Img.webp";
 import "./Home.css";
 import "./how_itworks.css";
-import step1 from "../img/step1.png";
-import step3 from "../img/step3.png";
-import step4 from "../img/step4.png";
-import step2 from "../img/step 2.png";
-import who_we_are from "../img/whoweare.png";
+import step1 from "../img/step1.webp";
+import step3 from "../img/step3.webp";
+import step4 from "../img/step4.webp";
+import step2 from "../img/step 2.webp";
+import who_we_are from "../img/whoweare.webp";
 import "./who_we_are.css";
 import "./meet_our_team.css";
-import avatar from "../img/avatar.png";
+import avatar from "../img/avatar.webp";
 import "./advisory_panel.css";
 import "./mentor_panel.css";
-import partnerships from "../img/partnerships.png";
+import partnerships from "../img/partnerships.webp";
 import "./partnerships.css";
-import dummy_company from "../img/dummy_comapny.png";
 import "./contact_us.css";
+import Seo from "../components/Seo";
 
-// contact us backend integration
-import { db } from "../config/firebase"; // Adjust path if needed
-import { collection, addDoc, Timestamp } from "firebase/firestore";
+const WEB3FORMS_ACCESS_KEY = process.env.REACT_APP_WEB3FORMS_ACCESS_KEY;
+
+const emptyForm = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  company: "",
+  hq: "",
+  designation: "",
+  companySize: "",
+  phone: "",
+};
 
 const Home = () => {
-  const [showModal, setShowModal] = useState(false);
-
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    company: "",
-    hq: "",
-    designation: "",
-    companySize: "",
-    phone: "",
-  });
+  const [formData, setFormData] = useState(emptyForm);
   const [status, setStatus] = useState("");
 
   const handleChange = (e) => {
@@ -46,24 +44,42 @@ const Home = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!WEB3FORMS_ACCESS_KEY) {
+      setStatus("Contact form is not configured yet.");
+      return;
+    }
+
     setStatus("Sending...");
 
     try {
-      await addDoc(collection(db, "contactMessages"), {
-        ...formData,
-        timestamp: Timestamp.now(),
+      const fullName = `${formData.firstName.trim()} ${formData.lastName.trim()}`.trim();
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `VetanNow demo request from ${fullName}`,
+          from_name: fullName,
+          name: fullName,
+          email: formData.email.trim(),
+          replyto: formData.email.trim(),
+          company: formData.company.trim(),
+          headquarters: formData.hq.trim(),
+          designation: formData.designation.trim(),
+          company_size: formData.companySize,
+          phone: formData.phone.trim(),
+        }),
       });
+      const data = await res.json();
+      if (!res.ok || !data.success) {
+        throw new Error(data.message || "Failed to send message");
+      }
       setStatus("Message sent successfully ✅");
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        company: "",
-        hq: "",
-        designation: "",
-        companySize: "",
-        phone: "",
-      });
+      setFormData(emptyForm);
     } catch (error) {
       console.error("Error sending message: ", error);
       setStatus("Failed to send message ❌");
@@ -74,6 +90,11 @@ const Home = () => {
 
   return (
     <div className="home-container">
+      <Seo
+        title="VetanNow | Get your salary anytime"
+        description="VetanNow lets employees of partner companies access earned wages before payday, with payroll reconciled at month end."
+        path="/"
+      />
       <div className="banner">
         <div className="left">
           <h1>Get your salary anytime.</h1>
@@ -113,7 +134,7 @@ const Home = () => {
                   salary access.
                 </p>
               </div>
-              <img src={step1} alt="Company Onboarding" />
+              <img src={step1} alt="Company onboarding" loading="lazy" />
             </div>
             <div className="arrow">↓</div>
           </div>
@@ -128,7 +149,7 @@ const Home = () => {
                   access.
                 </p>
               </div>
-              <img src={step2} alt="Employee Invitation" />
+              <img src={step2} alt="Employee invitation" loading="lazy" />
             </div>
             <div className="arrow">↓</div>
           </div>
@@ -143,7 +164,7 @@ const Home = () => {
                   anytime, on demand.
                 </p>
               </div>
-              <img src={step3} alt="Salary Access" />
+              <img src={step3} alt="Salary access" loading="lazy" />
             </div>
             <div className="arrow">↓</div>
           </div>
@@ -158,7 +179,7 @@ const Home = () => {
                   the normal payroll process.
                 </p>
               </div>
-              <img src={step4} alt="Payroll Integration" />
+              <img src={step4} alt="Payroll integration" loading="lazy" />
             </div>
           </div>
         </div>
@@ -185,132 +206,83 @@ const Home = () => {
             </p>
           </div>
           <div className="right-image">
-            <img src={who_we_are} alt="who_we_are" />
+            <img src={who_we_are} alt="Employees reviewing their earnings" loading="lazy" />
           </div>
         </div>
       </div>
 
       {/* END OF WHO WE ARE SECTION */}
 
-      {/* Meet our team */}
-      <div className="meet_our_team">
-        <h1>
+      <section className="meet_our_team" aria-labelledby="team-heading">
+        <p className="team-kicker">Leadership</p>
+        <h1 id="team-heading">
           Meet Our <span>Team</span>
         </h1>
 
         <div className="meet_our_team_container">
-          <div className="card" onClick={() => setShowModal(true)}>
-            <img src={avatar} alt="Manish Shukla" />
+          <article className="card">
+            <img src={avatar} alt="Manish Shukla, Founder and CEO" loading="lazy" />
             <h3>Manish Shukla</h3>
+            <p className="role">Founder & CEO</p>
             <p>
-              Manish Shukla is the Founder & CEO of VetanNow, with 10+ years in
-              fintech and digital lending.
+              A fintech founder with 10+ years in digital lending, building salary
+              access for India’s workforce.
             </p>
-            <h4>Founder & CEO</h4>
-            <button
-              className="linkedin-btn"
-              onClick={(e) => {
-                e.stopPropagation();
-                window.open(
-                  "https://www.linkedin.com/in/manish-shukla",
-                  "_blank"
-                );
-              }}
-            >
-              LinkedIn
-            </button>
-          </div>
-        </div>
-
-        {showModal && (
-          <div className="modal_overlay" onClick={() => setShowModal(false)}>
-            <div className="modal_content" onClick={(e) => e.stopPropagation()}>
-              <h2>Manish Shukla – Founder & CEO</h2>
-              <p>
-                A second-time fintech founder with deep insight into India’s
-                evolving financial landscape, Manish brings hands-on experience
-                from building and scaling digital lending products in Bharat. In
-                2018, he launched SalaryDost, a bootstrapped digital lending
-                platform that served thousands of salaried individuals and
-                survived through COVID—offering a front-row seat to the
-                liquidity challenges faced by India’s working population.
-                <br />
-                <br />
-                Prior to his entrepreneurial journey, Manish worked with a
-                public policy think tank, gaining exposure to systemic
-                challenges around financial inclusion and labor economics. This
-                unique blend of grassroots insight and fintech execution has
-                shaped his conviction in building VetanNow—a scalable,
-                compliance-ready platform designed to solve income timing gaps
-                for millions.
-                <br />
-                <br />
-                At VetanNow, Manish brings not just founder resilience but also
-                a deep product intuition, proven learning agility, and a bold
-                vision: to reimagine salary access for the 400M-strong Indian
-                workforce—with dignity, speed, and technology at its core.
-              </p>
-              <button onClick={() => setShowModal(false)}>Close</button>
+            <div className="team-actions">
+              <a
+                className="team-cta"
+                href="https://www.linkedin.com/in/manishshukla-ds/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
             </div>
-          </div>
-        )}
-      </div>
+          </article>
+        </div>
+      </section>
 
       {/* Partnerships */}
 
       <div className="partnerships">
-        <img src={partnerships} alt="Partnerships" />
-        <h1>
-          Our <span>Partnerships</span>
-        </h1>
-
-        <p>
-          We partner with change making employers and enable them to support and
-          work towards the financial wellbeing of their employees.
-          <br />
-          <br />
-          <span>
-            Before we partner, We evaluate 3 major aspects for any potential
-            employer partner
-          </span>
-          <br />
-          <br />
-          Corporate Background Professional backgrounds ofpromoters and
-          operators, analyze ongoing litigations as well as reference calls with
-          key customers and other stakeholders
-          <br />
-          <br />
-          Financials Analysis of annual reports for previous years to understand
-          scale, growth of business, unit economics, profitability patterns,
-          current cash position and outstanding debts and loans
-          <br />
-          <br />
-          Business Performance Review of key contracts, industry trends and
-          assets to understand ability of employer partner to settle payments
-          disbursements incurred VetanNow.
-          <br />
-          <br />
-          <span className="highlight">
-            Over xxx employees lives improved by financial well-being and
-            productivity
-          </span>
-        </p>
-
-        <div className="partnerships-container">
-          <div className="card">
-            <img src={dummy_company} alt="Partner 1" />
-            <h3>Partner 1</h3>
-            <p>Description of Partner 1</p>
+        <div className="partnerships-layout">
+          <div className="partnerships-image">
+            <img src={partnerships} alt="VetanNow employer partnerships" loading="lazy" />
           </div>
-          <div className="card">
-            <img src={dummy_company} alt="Partner 2" />
-            <h3>Partner 2</h3>
-            <p>Description of Partner 2</p>
-          </div>
-          <div className="card">
-            <img src={dummy_company} alt="Partner 3" />
-            <h3>Partner 3</h3>
-            <p>Description of Partner 3</p>
+          <div className="partnerships-content">
+            <h1>
+              Our <span>Partnerships</span>
+            </h1>
+            <p>
+              We partner with change making employers and enable them to support and
+              work towards the financial wellbeing of their employees.
+              <br />
+              <br />
+              <span>
+                Before we partner, We evaluate 3 major aspects for any potential
+                employer partner
+              </span>
+              <br />
+              <br />
+              Corporate background: professional backgrounds of promoters and
+              operators, ongoing litigations, and reference calls with key customers
+              and other stakeholders.
+              <br />
+              <br />
+              Financials Analysis of annual reports for previous years to understand
+              scale, growth of business, unit economics, profitability patterns,
+              current cash position and outstanding debts and loans
+              <br />
+              <br />
+              Business Performance Review of key contracts, industry trends and
+              assets to understand ability of employer partner to settle payments
+              disbursements incurred VetanNow.
+              <br />
+              <br />
+              <span className="highlight">
+                Built to improve employees’ financial well-being and day-to-day productivity.
+              </span>
+            </p>
           </div>
         </div>
       </div>

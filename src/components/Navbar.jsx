@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import logo from "../img/logo.png";
+import logo from "../img/logo.webp";
 import { NavLink, useLocation } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 
@@ -77,9 +77,15 @@ const Navbar = () => {
             Blogs
           </NavLink> */}
 
+          <NavLink
+            to="/faq"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            FAQs
+          </NavLink>
+
           <NavHashLink
             smooth
-            // className="demo-button"
             to="/#contact-us"
             className=""
             style={{
@@ -100,9 +106,10 @@ const Navbar = () => {
 
       {/* SVG Wave */}
       <svg
+        className="nav-wave"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 320"
-        height="300"
+        viewBox="0 0 1440 180"
+        preserveAspectRatio="none"
       >
         <path
           fill="#d40602"
@@ -110,7 +117,7 @@ const Navbar = () => {
           d="M0,128L60,138.7C120,149,240,171,360,154.7C480,139,600,85,720,64C840,43,960,53,1080,69.3C1200,85,1320,107,1380,117.3L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
         ></path>
         <path
-          fill="#e44e4e"
+          fill="#e35a56"
           fillOpacity="1"
           d="M0,64L60,85.3C120,107,240,149,360,144C480,139,600,85,720,69.3C840,53,960,75,1080,69.3C1200,64,1320,32,1380,16L1440,0L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
         ></path>

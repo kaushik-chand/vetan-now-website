@@ -1,9 +1,9 @@
 import React from 'react'
+import { Link } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 
-import vetannowLogo from "../img/vetannow_logo.png";
-import twitterIcon from "../img/twitter.png";
+import vetannowLogo from "../img/vetannow_logo.webp";
 import instagramIcon from "../img/instagram.png";
-import facebookIcon from "../img/facebook.png";
 import linkedinIcon from "../img/linkedin-logo.png";
 import "./footer.css";
 const Footer = () => {
@@ -15,57 +15,56 @@ const Footer = () => {
         <div className="left">
           <img src={vetannowLogo} alt="VetanNow Logo" />
           <p>
-            VetanNow is India s financial wellness suite that enables
-            employees to build a foundation for financial well being.
+            VetanNow is India's financial wellness suite that enables
+            employees to build a foundation for financial well-being.
           </p>
         </div>
         <div className="right">
           <div className="col">
             <h3>Products</h3>
             <ul>
-              <li>Salary On Demand</li>
-              <li>Financial Coaching</li>
-              <li>Financial Literacy</li>
+              <li><Link to="/services/employee">Salary On Demand</Link></li>
+              <li><Link to="/services/employee">Financial Coaching</Link></li>
+              <li><Link to="/services/employee">Financial Literacy</Link></li>
             </ul>
             <hr />
             <ul>
               <li>Company</li>
-              <li>About Us</li>
-              <li>FAQs</li>
-              <li>Blog</li>
-              <li>Contact Us</li>
+              <li><NavHashLink smooth to="/#who-we-are">About Us</NavHashLink></li>
+              <li><Link to="/faq">FAQs</Link></li>
+              <li><NavHashLink smooth to="/#contact-us">Contact Us</NavHashLink></li>
             </ul>
           </div>
           <div className="col">
             <h3>LEGAL</h3>
             <ul>
-              <li>Privacy Policy</li>
-              <li>Terms of Service</li>
-              <li>Refund Policy</li>
-              <li>Cookie Policy</li>
+              <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+              <li><Link to="/terms">Terms of Use</Link></li>
             </ul>
           </div>
           <div className="col">
             <ul>
-              <li>✅ ISO 27001 Certified</li>
               <li>✅ Strict Data Privacy</li>
               <li>✅ Labour Law Compliant</li>
             </ul>
 
-            {/* social */}
             <div className="social-icons">
-              <button type="button" aria-label="Twitter">
-                <img src={twitterIcon} alt="" />
-              </button>
-              <button type="button" aria-label="Instagram">
+              <a
+                href="https://www.instagram.com/vetannow/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="VetanNow on Instagram"
+              >
                 <img src={instagramIcon} alt="" />
-              </button>
-              <button type="button" aria-label="Facebook">
-                <img src={facebookIcon} alt="" />
-              </button>
-              <button type="button" aria-label="LinkedIn">
+              </a>
+              <a
+                href="https://www.linkedin.com/company/vetannow/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="VetanNow on LinkedIn"
+              >
                 <img src={linkedinIcon} alt="" />
-              </button>
+              </a>
             </div>
           </div>
         </div>

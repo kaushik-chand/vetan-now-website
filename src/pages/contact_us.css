@@ -1,8 +1,9 @@
 .contact-us {
     width: 100%;
+    scroll-margin-top: 160px;
     padding: 80px 20px;
-    background: linear-gradient(135deg, #fce4ec, #f8bbd0);
-    border-top: 4px solid #ff3b3f;
+    background: linear-gradient(135deg, #fff6f5, #fde8e6);
+    border-top: 4px solid var(--brand);
     border-radius: 28px 28px 0 0;
     text-align: center;
     position: relative;
@@ -18,7 +19,7 @@
 }
 
 .contact-us h1 span {
-    color: #ff3b3f;
+    color: var(--brand);
 }
 
 .contact-us-container {
@@ -75,11 +76,11 @@
 
 .contact-info div:hover {
     transform: translateX(6px);
-    color: #ff3b3f;
+    color: var(--brand);
 }
 
 .contact-info i {
-    color: #ff3b3f;
+    color: var(--brand);
     font-size: 1.25rem;
 }
 
@@ -118,7 +119,7 @@
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #ff3b3f;
+    border-color: var(--brand);
     background-color: #fff;
     box-shadow: 0 0 0 3px rgba(255, 59, 63, 0.15);
     outline: none;
@@ -126,7 +127,7 @@
 
 .contact-form button {
     padding: 16px;
-    background-color: #ff3b3f;
+    background-color: var(--brand);
     color: white;
     border: none;
     border-radius: 14px;
@@ -137,7 +138,7 @@
 }
 
 .contact-form button:hover {
-    background-color: #d73636;
+    background-color: var(--brand-hover);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(215, 54, 54, 0.3);
 }
@@ -178,7 +179,7 @@
 }
 
 .contact-form select:focus {
-    border-color: #ff3b3f;
+    border-color: var(--brand);
     background-color: #fff;
     box-shadow: 0 0 0 3px rgba(255, 59, 63, 0.15);
     outline: none;

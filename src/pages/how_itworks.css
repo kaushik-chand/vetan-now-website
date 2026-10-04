@@ -1,7 +1,7 @@
 .how_itworks {
     position: relative;
     /* Make this the anchor for absolutely positioned children */
-    width: 97vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,9 +9,9 @@
     gap: 60px;
     border-radius: 20px 20px;
     margin-top: 170px;
-    /* background: #f6d7da; */
+    /* background: var(--brand-soft); */
     /* background: linear-gradient(#d4050279,#e44e4e89); */
-    background-image: url("../img/howitwork3.png");
+    background-image: url("../img/howitwork3.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -40,13 +40,13 @@
     display: block;
     width: 80px;
     height: 4px;
-    background-color: #ff5757;
+    background-color: var(--brand);
     margin: 12px auto 0;
     border-radius: 2px;
 }
 
 .how_itworks .how_itworks_container h1 span {
-    color: #ff5757;
+    color: var(--brand);
 }
 
 
@@ -62,7 +62,7 @@
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     margin: 0 auto;
-    border: 2px solid #ff0000;
+    border: 2px solid var(--brand);
     backdrop-filter: blur(5px);
     padding: 12px;
 }
@@ -106,7 +106,7 @@
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-border: 2px solid #ff0000;
+border: 2px solid var(--brand);
     backdrop-filter: blur(5px);
     /* slightly smaller */
     max-width: 400px;
@@ -134,7 +134,7 @@ border: 2px solid #ff0000;
 }
 
 .card h2 span {
-    background: #ff5757;
+    background: var(--brand);
     color: #fff;
     border-radius: 50%;
     width: 48px;
@@ -182,7 +182,7 @@ border: 2px solid #ff0000;
 
 .arrow {
     font-size: 5rem;
-    color: #ff5757;
+    color: var(--brand);
     transition: transform 0.3s ease;
     transform: rotate(0deg);
     font-weight: bolder;

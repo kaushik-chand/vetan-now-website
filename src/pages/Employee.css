@@ -20,7 +20,7 @@
     gap: 30px;
     width: 100%;
     max-width: 1200px;
-    margin-top: -100px;
+    margin-top: 0;
     /* background: #ffffff; */
     /* adjust in responsive design */
 }
@@ -95,7 +95,7 @@
 @media (max-width: 1024px) {
     .employee-container .banner {
         flex-direction: column;
-        margin-top: 180px;
+        margin-top: 24px;
         gap: 20px;
     }
 
@@ -135,12 +135,12 @@
     }
 
     .employee-container .banner {
-        margin-top: 60px;
+        margin-top: 16px;
         gap: 15px;
     }
 
     .employee-container .banner .left h1 {
-        font-size: 22px;
+        font-size: 32px;
     }
 
     .employee-container .banner .left h2 {

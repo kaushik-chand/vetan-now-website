@@ -1,14 +1,14 @@
 import React from "react";
-import rightImage from "../img/employer1.png";
+import rightImage from "../img/employer1.webp";
 import "./Employer1.css";
 import "./Employer2.css";
 import "./employer3.css";
-import empolyee from "../img/employer.png";
+import empolyee from "../img/employer.webp";
 import access from "../img/access.png";
 import availability from "../img/availability.png";
 import percentage from "../img/percentage.png";
 import coaching from "../img/coaching.png";
-import bg from "../img/employee2.png";
+import bg from "../img/employee2.webp";
 import "./employer4.css";
 import "./Ready_to_get_started.css";
 import zero from "../img/0-percent (1).png";
@@ -16,10 +16,16 @@ import integration from "../img/integration.png";
 import nochanges from "../img/nochange.png";
 import risk from "../img/risk.png";
 import { NavHashLink } from "react-router-hash-link";
+import Seo from "../components/Seo";
 
 const Employer = () => {
   return (
     <div className="employer-container">
+      <Seo
+        title="Employers | VetanNow"
+        description="Offer earned wage access to your team with no change to payroll cash flow. VetanNow integrates with your existing payroll process."
+        path="/services/employer"
+      />
       <div className="banner">
         <h4>
           <img src={empolyee} alt="employer Icon" />
@@ -68,12 +74,9 @@ const Employer = () => {
             <h3>Exposes You to no Financial Risk</h3>
           </div>
         </div>
-        <button
-          className="demo-button"
-          onClick={() => (window.location.href = "")}
-        >
+        <NavHashLink smooth to="/#contact-us" className="demo-button">
           Request Demo
-        </button>
+        </NavHashLink>
       </div>{" "}
       <div className="how_vetannow_works">
         <h1>
@@ -117,17 +120,8 @@ const Employer = () => {
             your employees
           </p>
 
-          <NavHashLink
-            smooth
-            // className="demo-button"
-            to="/#contact-us"
-            className=""
-            style={{
-              border: "none",
-              "background-color": "none",
-            }}
-          >
-            <button className="demo-button">Request Demo</button>
+          <NavHashLink smooth to="/#contact-us" className="demo-button">
+            Request Demo
           </NavHashLink>
         </div>
       </div>
@@ -191,17 +185,8 @@ const Employer = () => {
           partnered with VetanNow
         </p>
         <div className="buttons">
-          <NavHashLink
-            smooth
-            // className="demo-button"
-            to="/#contact-us"
-            className=""
-            style={{
-              border: "none",
-              "background-color": "none",
-            }}
-          >
-            <button className="demo-button">Request Demo</button>
+          <NavHashLink smooth to="/#contact-us" className="demo-button">
+            Request Demo
           </NavHashLink>
         </div>
       </div>

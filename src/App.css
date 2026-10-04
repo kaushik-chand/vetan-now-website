@@ -1,7 +1,25 @@
+:root {
+  --brand: #d40602;
+  --brand-hover: #a80501;
+  --brand-soft: #fff4f3;
+  --ink: #1c1c1c;
+  --muted: #5c5c5c;
+  --surface: #f7f7f7;
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -14,8 +32,39 @@ body {
     scroll-behavior: smooth;
 }
 
+.home-container,
+.employee-container,
+.employer-container,
+.faq-page,
+.legal-page {
+  zoom: 0.88;
+}
+
+.page-transition {
+  animation: pageIn 0.45s ease;
+}
+
+@keyframes pageIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .page-transition {
+    animation: none;
+  }
+}
+
 .demo-button {
-  background-color: #000;
+  background-color: var(--brand);
   color: #fff;
   padding: 10px 20px;
   border-radius: 12px;
@@ -25,17 +74,19 @@ body {
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25);
   transition: all 0.2s ease-in-out;
   font-size: 16px;
+  display: inline-block;
+  text-decoration: none;
   /* margin-left: 24px; */
 }
 
 .demo-button:hover {
-  background-color: #222;
+  background-color: var(--brand-hover);
   box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.35);
   transform: translateY(-2px);
 }
 
 .demo-button:active {
-  background-color: #000;
+  background-color: var(--brand);
   box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.25);
   transform: translateY(0);
 }
@@ -48,6 +99,6 @@ body {
 }
 
 ::-webkit-scrollbar-thumb{
-  background-color: #ff5757;
+  background-color: var(--brand);
   border-radius: 4px;
 }
