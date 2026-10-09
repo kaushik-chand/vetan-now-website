@@ -21,16 +21,10 @@ const Footer = () => {
         </div>
         <div className="right">
           <div className="col">
-            <h3>Products</h3>
+            <h3>Company</h3>
             <ul>
-              <li><Link to="/services/employee">Salary On Demand</Link></li>
-              <li><Link to="/services/employee">Financial Coaching</Link></li>
-              <li><Link to="/services/employee">Financial Literacy</Link></li>
-            </ul>
-            <hr />
-            <ul>
-              <li>Company</li>
               <li><NavHashLink smooth to="/#who-we-are">About Us</NavHashLink></li>
+              <li><Link to="/blogs">Blogs</Link></li>
               <li><Link to="/faq">FAQs</Link></li>
               <li><NavHashLink smooth to="/#contact-us">Contact Us</NavHashLink></li>
             </ul>

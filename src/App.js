@@ -9,6 +9,8 @@ import Employer from './pages/Employer.jsx'
 import Faq from './pages/Faq.jsx'
 import PrivacyPolicy from './pages/PrivacyPolicy.jsx'
 import TermsOfUse from './pages/TermsOfUse.jsx'
+import Blogs from './pages/Blogs.jsx'
+import BlogPost from './pages/BlogPost.jsx'
 
 const PageTransition = ({ children }) => {
   const { pathname, hash } = useLocation()
@@ -64,6 +66,8 @@ const App = () => {
           <Route path="/services/employee" element={<Employee />} />
           <Route path="/services/employer" element={<Employer />} />
           <Route path="/faq" element={<Faq />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/:slug" element={<BlogPost />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfUse />} />
         </Routes>
