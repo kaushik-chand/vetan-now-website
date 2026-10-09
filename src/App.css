@@ -36,7 +36,8 @@ body {
 .employee-container,
 .employer-container,
 .faq-page,
-.legal-page {
+.legal-page,
+.blogs-page {
   zoom: 0.88;
 }
 

@@ -1,28 +1,41 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import logo from "../img/logo.webp";
-import { NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
   const location = useLocation();
   const isServicesActive = location.pathname.startsWith("/services");
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+    setServicesOpen(false);
+  };
+
+  const toggleServices = (event) => {
+    event.stopPropagation();
+    if (window.matchMedia("(max-width: 1324px)").matches) {
+      setServicesOpen((open) => !open);
+    }
+  };
 
   return (
     <>
       <nav className="navbar-container">
-        <div className="navbar-logo">
-          <img src={logo} alt="VetanNowLogo" />
+        <Link to="/" className="navbar-logo" onClick={closeMenu}>
+          <img src={logo} alt="VetanNow" />
           <div className="navbar-brand-text">
             <span className="brand-bold">VetanNow</span>
             <span className="brand-tagline">Empowering Bharat Workforces</span>
           </div>
-        </div>
+        </Link>
 
         <div
           className={`navbar-links ${menuOpen ? "open" : ""}`}
-          onClick={() => setMenuOpen(false)}
+          onClick={closeMenu}
         >
           <NavLink
             to="/"
@@ -33,8 +46,10 @@ const Navbar = () => {
 
           {/* <div className="dropdown">Products ▾</div> */}
 
-          <div className={`dropdown ${isServicesActive ? "active" : ""}`}>
-            Services ▾
+          <div className={`dropdown ${isServicesActive ? "active" : ""} ${servicesOpen ? "open" : ""}`}>
+            <button type="button" className="dropdown-toggle" onClick={toggleServices}>
+              Services ▾
+            </button>
             <div className="dropdown-content">
               <NavLink
                 to="/services/employee"
@@ -70,12 +85,12 @@ const Navbar = () => {
           >
             Careers
           </NavLink> */}
-          {/* <NavLink
-            to="/blog"
+          <NavLink
+            to="/blogs"
             className={({ isActive }) => (isActive ? "active" : "")}
           >
             Blogs
-          </NavLink> */}
+          </NavLink>
 
           <NavLink
             to="/faq"
@@ -97,7 +112,13 @@ const Navbar = () => {
           </NavHashLink>
         </div>
 
-        <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        <div
+          className="hamburger"
+          onClick={() => {
+            setMenuOpen((open) => !open);
+            setServicesOpen(false);
+          }}
+        >
           <span></span>
           <span></span>
           <span></span>

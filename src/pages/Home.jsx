@@ -214,10 +214,7 @@ const Home = () => {
       {/* END OF WHO WE ARE SECTION */}
 
       <section className="meet_our_team" aria-labelledby="team-heading">
-        <p className="team-kicker">Leadership</p>
-        <h1 id="team-heading">
-          Meet Our <span>Team</span>
-        </h1>
+        <h1 id="team-heading">Meet our team</h1>
 
         <div className="meet_our_team_container">
           <article className="card">
@@ -228,16 +225,20 @@ const Home = () => {
               A fintech founder with 10+ years in digital lending, building salary
               access for India’s workforce.
             </p>
-            <div className="team-actions">
-              <a
-                className="team-cta"
-                href="https://www.linkedin.com/in/manishshukla-ds/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LinkedIn
-              </a>
-            </div>
+            <a
+              className="team-linkedin"
+              href="https://www.linkedin.com/in/manishshukla-ds/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Manish Shukla on LinkedIn"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  fill="currentColor"
+                  d="M6.5 9H4V20h2.5V9zM5.2 4C4.3 4 3.6 4.7 3.6 5.6c0 .9.7 1.6 1.6 1.6.9 0 1.6-.7 1.6-1.6C6.8 4.7 6.1 4 5.2 4zM20 20h-2.5v-5.6c0-1.6-.6-2.6-2-2.6-1 0-1.6.7-1.9 1.4-.1.2-.1.6-.1.9V20H11V9h2.4v1.5c.4-.7 1.3-1.8 3.2-1.8 2.3 0 4 1.5 4 4.8V20z"
+                />
+              </svg>
+            </a>
           </article>
         </div>
       </section>
