@@ -97,7 +97,7 @@ const Home = () => {
       />
       <div className="banner">
         <div className="left">
-          <h1>Get your salary anytime.</h1>
+          <h1>Get your salary anytime. and anywhere</h1>
           <h2>
             Here we are to help
             <span> Employees</span>
