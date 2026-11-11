@@ -1,174 +1,253 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;800&display=swap');
+/* ==========================================================================
+   EMPLOYEE PAGE STYLES — Unified with Home Design System
+   ========================================================================== */
 
-.employee-container {
-    font-family: 'Nunito', sans-serif;
-    padding: 10px 20px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    background: #f9f9f9;
+.employee-page-wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+  background-color: #fafbfc;
+  color: #1f2937;
+  font-family: 'Plus Jakarta Sans', 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding-top: 90px;
 }
 
-.employee-container .banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    width: 100%;
-    max-width: 1200px;
-    margin-top: 0;
-    /* background: #ffffff; */
-    /* adjust in responsive design */
+/* ---- Hero ---- */
+.employee-hero-section {
+  padding: 40px 24px 70px;
+  background: radial-gradient(circle at 80% 20%, rgba(254, 226, 226, 0.35) 0%, transparent 60%),
+              radial-gradient(circle at 10% 70%, rgba(254, 226, 226, 0.25) 0%, transparent 50%);
 }
 
-.employee-container .banner .left {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
-    width: 70%;
-    max-width: 700px;
-    margin-right: 30px;
-    /* adjust in responsive design */
+.employee-hero-container {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.employee-container .banner .left h4{
-    font-size: 29px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    color: #333;
-}
-.employee-container .banner .left h4 img{
-    width: 100%;
-    height: auto;
-    max-width: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-    /* margin-bottom: 20px; */
+.employee-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
 }
 
-.employee-container .banner .left h1 {
-    font-size: 60px;
-    font-weight: 800;
-    color: #000;
-    line-height: 1.2;
+.employee-hero-title {
+  font-size: clamp(32px, 3.6vw, 50px);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #111827;
+  letter-spacing: -0.6px;
+  margin-bottom: 14px;
 }
 
-
-
-
-.employee-container .banner .left p {
-    font-size: 24px;
-    color: #000000;
-    font-weight: 700;
-    line-height: 1.5;
-    font-style: italic;
-    letter-spacing: 0.4px;
-    text-align: justify;
+.employee-hero-subtitle {
+  font-size: clamp(16px, 1.3vw, 19px);
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 14px;
 }
 
-.employee-container .banner .right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-    /* max-width: 500px; */
+.employee-hero-desc {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 28px;
+  max-width: 600px;
 }
 
-.employee-container .employee-container .banner .right img {
-    width: 100%;
-    height: auto;
-    /* width: 100%; */
-    /* max-width: 700px; */
-    object-fit: contain;
+.employee-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
 }
 
-/* Responsive adjustments */
+.employee-hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---- Benefits 6-Card Grid ---- */
+.employee-benefits-section {
+  padding: 80px 24px;
+  background: #ffffff;
+}
+
+.benefits-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  background: #fafbfc;
+  border: 1px solid rgba(220, 38, 38, 0.1);
+  border-radius: 18px;
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+  background: #ffffff;
+  border-color: rgba(220, 38, 38, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(220, 38, 38, 0.08);
+}
+
+.benefit-icon-box {
+  width: 48px;
+  height: 48px;
+  background: #fef2f2;
+  border: 1px solid #fee2e2;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefit-icon-box img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.benefit-card h3 {
+  font-size: 16.5px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0;
+}
+
+.benefit-card p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* ---- Refer Employer ---- */
+.refer-employer-section {
+  padding: 80px 24px;
+  background: radial-gradient(circle at 50% 50%, rgba(254, 226, 226, 0.3) 0%, transparent 70%);
+}
+
+/* ---- CTA / Download Banner ---- */
+.employee-cta-banner-section {
+  padding: 40px 24px 80px;
+  background: #fafbfc;
+}
+
+.employee-cta-banner-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 48px 40px;
+  text-align: center;
+  border: 1px solid rgba(220, 38, 38, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.cta-banner-title {
+  font-size: clamp(24px, 2.8vw, 36px);
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 14px;
+}
+
+.cta-banner-desc {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #4b5563;
+  max-width: 620px;
+  margin: 0 auto 28px;
+}
+
+.app-download-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.store-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #111827;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 22px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.store-btn:hover {
+  background: #1f2937;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.store-btn img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.store-btn .btn-text {
+  text-align: left;
+  line-height: 1.2;
+}
+
+.store-btn .btn-text span {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  opacity: 0.8;
+  display: block;
+}
+
+.store-btn .btn-text strong {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+/* ---- Responsive ---- */
 @media (max-width: 1024px) {
-    .employee-container .banner {
-        flex-direction: column;
-        margin-top: 24px;
-        gap: 20px;
-    }
-
-    .employee-container .banner .left,
-    .employee-container .banner .right {
-        width: 100%;
-        margin-right: 0;
-        align-items: center;
-        text-align: center;
-    }
-
-    .employee-container .banner .left h1 {
-        font-size: 52px;
-    }
-
-    .employee-container .banner .left h2 {
-        font-size: 28px;
-    }
-
-    .employee-container .banner .left h2 span {
-        font-size: 30px;
-    }
-
-    .employee-container .banner .left h3 {
-        font-size: 20px;
-    }
-
-    .employee-container .banner .left p {
-        font-size: 16px;
-    }
+  .employee-hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .employee-hero-content {
+    align-items: center;
+    text-align: center;
+  }
+  .employee-hero-actions {
+    justify-content: center;
+  }
+  .benefits-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-@media (max-width: 600px) {
-    .employee-container {
-        width: 90%;
-        padding: 10px;
-    }
-
-    .employee-container .banner {
-        margin-top: 16px;
-        gap: 15px;
-    }
-
-    .employee-container .banner .left h1 {
-        font-size: 32px;
-    }
-
-    .employee-container .banner .left h2 {
-        font-size: 22px;
-    }
-
-    .employee-container .banner .left h2 span {
-        font-size: 24px;
-    }
-
-    .employee-container .banner .left h3 {
-        font-size: 18px;
-    }
-
-    .employee-container .banner .left p {
-        font-size: 14px;
-    }
-
-    .employee-container .banner .right img {
-        width: 90%;
-    }
-
-    .employee-container .banner .left h4 {
-        font-size: 24px;
-    }
-
-    .employee-container .banner .left h4 img {
-        max-width: 40px;
-    }
+@media (max-width: 768px) {
+  .employee-page-wrapper {
+    padding-top: 80px;
+  }
+  .benefits-cards-grid {
+    grid-template-columns: 1fr;
+  }
 }
-

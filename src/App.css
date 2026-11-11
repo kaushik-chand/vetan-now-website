@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap');
+
 :root {
-  --brand: #d40602;
-  --brand-hover: #a80501;
-  --brand-soft: #fff4f3;
-  --ink: #1c1c1c;
-  --muted: #5c5c5c;
-  --surface: #f7f7f7;
+  --brand: #dc2626;
+  --brand-hover: #b91c1c;
+  --brand-soft: #fef2f2;
+  --brand-surface: #fff8f8;
+  --brand-border: #fee2e2;
+  --ink: #111827;
+  --muted: #4b5563;
+  --surface: #ffffff;
 }
 
 *{
@@ -32,13 +36,12 @@ body {
     scroll-behavior: smooth;
 }
 
-.home-container,
-.employee-container,
-.employer-container,
-.faq-page,
-.legal-page,
-.blogs-page {
+.legal-page {
   zoom: 0.88;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .page-transition {

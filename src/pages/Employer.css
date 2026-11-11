@@ -1,0 +1,247 @@
+/* ==========================================================================
+   EMPLOYER PAGE STYLES — Unified with Home Design System
+   ========================================================================== */
+
+.employer-page-wrapper {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+  background-color: #fafbfc;
+  color: #1f2937;
+  font-family: 'Plus Jakarta Sans', 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  padding-top: 90px;
+}
+
+/* ---- Hero ---- */
+.employer-hero-section {
+  padding: 40px 24px 70px;
+  background: radial-gradient(circle at 80% 20%, rgba(254, 226, 226, 0.35) 0%, transparent 60%),
+              radial-gradient(circle at 10% 80%, rgba(254, 226, 226, 0.2) 0%, transparent 50%);
+}
+
+.employer-hero-container {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.employer-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.employer-hero-title {
+  font-size: clamp(30px, 3.4vw, 48px);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #111827;
+  letter-spacing: -0.6px;
+  margin-bottom: 16px;
+}
+
+.employer-hero-desc {
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 28px;
+  max-width: 600px;
+}
+
+.employer-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.employer-hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---- 4 Highlights Strip ---- */
+.employer-highlights-section {
+  padding: 0 24px 70px;
+  background: #fafbfc;
+}
+
+.employer-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  max-width: 1200px;
+  margin: -30px auto 0;
+  position: relative;
+  z-index: 2;
+}
+
+.highlight-stat-card {
+  background: #ffffff;
+  border: 1px solid rgba(220, 38, 38, 0.1);
+  border-radius: 18px;
+  padding: 24px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+}
+
+.highlight-stat-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(220, 38, 38, 0.3);
+  box-shadow: 0 12px 28px rgba(220, 38, 38, 0.08);
+}
+
+.highlight-icon-wrap {
+  width: 52px;
+  height: 52px;
+  background: #fef2f2;
+  border: 1px solid #fee2e2;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.highlight-icon-wrap img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.highlight-stat-card h3 {
+  font-size: 15px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.highlight-stat-card p {
+  font-size: 13px;
+  line-height: 1.55;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* ---- Employer Benefits Grid ---- */
+.employer-benefits-section {
+  padding: 80px 24px;
+  background: #ffffff;
+}
+
+.employer-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.employer-benefit-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: #fafbfc;
+  border: 1px solid rgba(220, 38, 38, 0.1);
+  border-radius: 18px;
+  padding: 24px 22px;
+  transition: all 0.3s ease;
+}
+
+.employer-benefit-card:hover {
+  background: #ffffff;
+  border-color: rgba(220, 38, 38, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(220, 38, 38, 0.08);
+}
+
+.employer-benefit-card h3 {
+  font-size: 16px;
+  font-weight: 800;
+  color: #111827;
+  margin: 0 0 6px;
+}
+
+.employer-benefit-card p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* ---- Know More CTA ---- */
+.employer-know-more-section {
+  padding: 40px 24px;
+  background: radial-gradient(circle at 50% 50%, rgba(254, 226, 226, 0.3) 0%, transparent 70%);
+}
+
+.employer-know-more-card {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 44px 36px;
+  text-align: center;
+  border: 1px solid rgba(220, 38, 38, 0.12);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.04);
+}
+
+/* ---- CTA Banner ---- */
+.employer-cta-banner-section {
+  padding: 40px 24px 80px;
+  background: #fafbfc;
+}
+
+.employer-cta-banner-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 48px 40px;
+  text-align: center;
+  border: 1px solid rgba(220, 38, 38, 0.12);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .employer-hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .employer-hero-content {
+    align-items: center;
+    text-align: center;
+  }
+  .employer-hero-actions {
+    justify-content: center;
+  }
+  .employer-highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .employer-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .employer-page-wrapper {
+    padding-top: 80px;
+  }
+  .employer-highlights-grid {
+    grid-template-columns: 1fr;
+    margin-top: 0;
+  }
+}
+

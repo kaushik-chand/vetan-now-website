@@ -9,20 +9,20 @@ const BlogPost = () => {
 
   if (!post) {
     return (
-      <main className="blogs-page">
+      <main className="blogs-page-wrapper blog-article">
         <h1>Article not found</h1>
-        <Link className="blog-read" to="/blogs">
-          Back to blogs
+        <Link className="blog-read-link" to="/blogs">
+          ← Back to blogs
         </Link>
       </main>
     );
   }
 
   return (
-    <main className="blogs-page blog-article">
+    <main className="blogs-page-wrapper blog-article">
       <Seo title={`${post.title} | VetanNow`} description={post.excerpt} path={`/blogs/${post.slug}`} />
       <Link className="blog-back" to="/blogs">
-        Back to blogs
+        ← Back to blogs
       </Link>
       <h1>{post.title}</h1>
       <img src={post.image} alt={post.imageAlt} />
