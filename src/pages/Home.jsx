@@ -89,122 +89,12 @@ const Home = () => {
         description="VetanNow helps employees access a portion of their earned wages before payday to avoid high-interest loans and manage emergencies with financial control."
         path="/"
       />
-
-      {/* ========================================================= */}
-      {/* SECTION 1: HERO SECTION                                   */}
-      {/* ========================================================= */}
-      <section className="hero-section" id="hero">
-        <div className="hero-container">
-          <div className="hero-content">
-            <div className="section-pill hero-pill">
-              <span className="pill-dot"></span>
-              FINANCIAL FLEXIBILITY
-            </div>
-
-            <h1 className="hero-heading">
-              Your salary shouldn't be locked behind a date{" "}
-              <span className="highlight-crimson">on the calendar.</span>
-            </h1>
-
-            <p className="hero-subtitle">
-              Financial flexibility for everyday life.
-            </p>
-
-            <p className="hero-description">
-              VetanNow is a workforce financial wellness platform that starts with
-              Earned Wage Access (EWA), helping employees access a portion of their
-              earned wages before payday to avoid unnecessary high-interest loans
-              and manage emergencies with greater financial control.
-            </p>
-
-            <div className="hero-actions">
-              <a href="#contact-us" className="btn-crimson-primary">
-                Request a Demo <span className="btn-arrow">→</span>
-              </a>
-              <button
-                type="button"
-                className="btn-crimson-secondary"
-                onClick={() => setIsVideoModalOpen(true)}
-              >
-                <span className="play-icon">▶</span> Watch Video
-              </button>
-            </div>
-          </div>
-
-          <div className="hero-visual">
-            <div className="hero-graphic-card">
-              <img
-                src={heroInfographic}
-                alt="VetanNow App preview showing earned wage access and transfer confirmation"
-                className="hero-image"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* 4 Feature Highlights Row */}
-        <div className="hero-features-row">
-          <div className="feature-pill-card">
-            <div className="feature-icon-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <rect x="2" y="4" width="20" height="16" rx="3" />
-                <path d="M12 2v2M12 20v2M2 10h20" />
-              </svg>
-            </div>
-            <div className="feature-info">
-              <h4>Instant Earned Wages</h4>
-              <p>Access earned pay anytime before payday without waiting for month-end.</p>
-            </div>
-          </div>
-
-          <div className="feature-pill-card">
-            <div className="feature-icon-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-              </svg>
-            </div>
-            <div className="feature-info">
-              <h4>For Everyday Needs</h4>
-              <p>Handle unexpected medical emergencies, utilities, or daily expenses.</p>
-            </div>
-          </div>
-
-          <div className="feature-pill-card">
-            <div className="feature-icon-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                <path d="M9 12l2 2 4-4" />
-              </svg>
-            </div>
-            <div className="feature-info">
-              <h4>Completely Transparent</h4>
-              <p>Easy setup and clear rules. No hidden fees, compounding charges, or rollover debt.</p>
-            </div>
-          </div>
-
-          <div className="feature-pill-card">
-            <div className="feature-icon-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-              </svg>
-            </div>
-            <div className="feature-info">
-              <h4>A Healthier Financial Life</h4>
-              <p>Greater stability and reduced financial stress for employees and employers alike.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ========================================================= */}
-      {/* SECTION 2: HOW VETANNOW WORKS (Structured 4-Step Grid)    */}
-      {/* ========================================================= */}
-      <section className="how-it-works-section" id="how-it-works">
-        <div className="section-header text-center">
-          <div className="section-pill center-pill">HOW VETANNOW WORKS</div>
-          <h2 className="section-heading">
-            A simple, seamless way to enable{" "}
-            <span className="highlight-crimson">financial flexibility</span> for your workforce.
+      <div className="banner">
+        <div className="left">
+          <h1>Get your salary anytime.</h1>
+          <h2>
+            Here we are to help
+            <span> Employees</span>
           </h2>
           <p className="section-subheading">
             A four-step streamlined journey to integrate VetanNow into your organization
