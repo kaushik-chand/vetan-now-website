@@ -1,195 +1,219 @@
 import React from "react";
-import rightImage from "../img/employer1.webp";
-import "./Employer1.css";
-import "./Employer2.css";
-import "./employer3.css";
-import empolyee from "../img/employer.webp";
-import access from "../img/access.png";
-import availability from "../img/availability.png";
-import percentage from "../img/percentage.png";
-import coaching from "../img/coaching.png";
-import bg from "../img/employee2.webp";
-import "./employer4.css";
-import "./Ready_to_get_started.css";
-import zero from "../img/0-percent (1).png";
-import integration from "../img/integration.png";
-import nochanges from "../img/nochange.png";
-import risk from "../img/risk.png";
-import { NavHashLink } from "react-router-hash-link";
+import "./Employer.css";
 import Seo from "../components/Seo";
+import { NavHashLink } from "react-router-hash-link";
+
+// Assets
+import rightImage from "../img/employer1.webp";
+import zeroIcon from "../img/0-percent (1).png";
+import integrationIcon from "../img/integration.png";
+import nochangeIcon from "../img/nochange.png";
+import riskIcon from "../img/risk.png";
+import accessIcon from "../img/access.png";
+import availabilityIcon from "../img/availability.png";
+import percentageIcon from "../img/percentage.png";
+import coachingIcon from "../img/coaching.png";
 
 const Employer = () => {
   return (
-    <div className="employer-container">
+    <div className="employer-page-wrapper">
       <Seo
-        title="Employers | VetanNow"
+        title="Employers | VetanNow — Zero Cost Employee Benefits"
         description="Offer earned wage access to your team with no change to payroll cash flow. VetanNow integrates with your existing payroll process."
         path="/services/employer"
       />
-      <div className="banner">
-        <h4>
-          <img src={empolyee} alt="employer Icon" />
-          Employer
-        </h4>
-        <h1>
-          <span>VetanNow </span>
-          is the right earning on demand provide for your organization.
-        </h1>
-        <div className="banner-content">
-          <div className="left">
-            <p>
-              VetanNow allows employees of our partnering firms access to a
-              portion of their earned pay as soon as they earned pay as soon as
-              they've earned it with, importantly, no financial impact on your
-              business and a seamless payroll, time and attendance management
-              system at no cost.
+
+      {/* ========================================================= */}
+      {/* HERO SECTION                                              */}
+      {/* ========================================================= */}
+      <section className="employer-hero-section">
+        <div className="employer-hero-container">
+          <div className="employer-hero-content">
+            <div className="section-pill">
+              <span className="pill-dot"></span>
+              FOR EMPLOYERS
+            </div>
+
+            <h1 className="employer-hero-title">
+              <span className="highlight-crimson">VetanNow</span> is the right earned wage
+              access provider for your organization.
+            </h1>
+
+            <p className="employer-hero-desc">
+              VetanNow allows employees of partnering firms to access a portion of their
+              earned pay as soon as they've earned it, with zero financial impact on your
+              business and a seamless payroll integration at no cost to you.
             </p>
-            <button className="demo-button">Download VentanNow</button>
+
+            <div className="employer-hero-actions">
+              <NavHashLink smooth to="/#contact-us" className="btn-crimson-primary">
+                Request a Demo <span className="btn-arrow">→</span>
+              </NavHashLink>
+              <a href="#employer-benefits" className="btn-crimson-secondary">
+                See Employer Benefits
+              </a>
+            </div>
           </div>
-          <div className="right">
-            <img
-              src={rightImage}
-              style={{ "max-width": "500px" }}
-              alt="Home Banner"
-            />
+
+          <div className="employer-hero-visual">
+            <div className="visual-card-wrap">
+              <img
+                src={rightImage}
+                alt="Employer dashboard overview showing VetanNow integration"
+                className="section-featured-image"
+                style={{ maxWidth: "500px" }}
+              />
+            </div>
           </div>
         </div>
-      </div>
-      <div className="Request_Demo">
-        <div className="Request_Demo_content">
-          <div className="col">
-            <img src={zero} alt="zero" />
+      </section>
+
+      {/* ========================================================= */}
+      {/* 4 HIGHLIGHTS — Zero Cost, Integration, No Changes, No Risk */}
+      {/* ========================================================= */}
+      <section className="employer-highlights-section">
+        <div className="employer-highlights-grid">
+          <div className="highlight-stat-card">
+            <div className="highlight-icon-wrap">
+              <img src={zeroIcon} alt="Zero cost" />
+            </div>
             <h3>Zero Cost to Your Company</h3>
+            <p>No capital outlay required — employees access their own earned wages.</p>
           </div>
-          <div className="col">
-            <img src={integration} alt="" />
-            <h3>Intergrated Seamlessly with Payroll</h3>
+
+          <div className="highlight-stat-card">
+            <div className="highlight-icon-wrap">
+              <img src={integrationIcon} alt="Seamless integration" />
+            </div>
+            <h3>Seamless Payroll Integration</h3>
+            <p>Plug-and-play with any HRMS or payroll system with minimal configuration.</p>
           </div>
-          <div className="col">
-            <img src={nochanges} alt="" />
-            <h3>No Changes to Payroll Cycle or Cashflow</h3>
+
+          <div className="highlight-stat-card">
+            <div className="highlight-icon-wrap">
+              <img src={nochangeIcon} alt="No changes" />
+            </div>
+            <h3>No Changes to Cash Flow</h3>
+            <p>Payroll cycle remains unchanged — disbursements are auto-reconciled at month-end.</p>
           </div>
-          <div className="col">
-            <img src={risk} alt="" />
-            <h3>Exposes You to no Financial Risk</h3>
+
+          <div className="highlight-stat-card">
+            <div className="highlight-icon-wrap">
+              <img src={riskIcon} alt="No risk" />
+            </div>
+            <h3>Zero Financial Risk</h3>
+            <p>VetanNow bears all credit and operational risk — your balance sheet stays clean.</p>
           </div>
         </div>
-        <NavHashLink smooth to="/#contact-us" className="demo-button">
-          Request Demo
-        </NavHashLink>
-      </div>{" "}
-      <div className="how_vetannow_works">
-        <h1>
-          What employers get with <span>VetanNow </span>?
-        </h1>
-        <div className="how_vetannow_works_container">
-          <div className="col">
-            {/* 3 li 1.Easy access to liquidity 2. Timely availability of funds 3.Hassle-free paperwork */}
-            <li>
-              <img src={access} alt="access" />
-              <h4>Improve employee productivity</h4>
-              <p>by eliminating financial stress</p>
-            </li>
-            <li>
-              <img src={availability} alt="availability" />
-              <h4>Attract talent & reduce employee turnover</h4>
-              <p>via earned salary access</p>
-            </li>
-          </div>
-          <div className="col">
-            {/* 3 li 1.Easy access to liquidity 2. Timely availability of funds 3.Hassle-free paperwork */}
-            <li>
-              <img src={percentage} alt="availability" />
-              <h4>Track employee financial health</h4>
-              <p>via VetanNow employer dashboard</p>
-            </li>
-            <li>
-              <img src={coaching} alt="coaching" />
-              <h4>Zero cost plug and play</h4>
-              <p>compatible with your HRMS</p>
-            </li>
-          </div>
-          <img className="bg" src={bg} alt="bg" />
-        </div>
-      </div>
-      <div className="Get_in_touch">
-        <div className="content">
-          <h1>Know more about us</h1>
-          <p>
-            Download our corporate brochure to improve the financial wellness of
-            your employees
+      </section>
+
+      {/* ========================================================= */}
+      {/* WHAT EMPLOYERS GET — 4 Benefits Grid                      */}
+      {/* ========================================================= */}
+      <section className="employer-benefits-section" id="employer-benefits">
+        <div className="section-header text-center">
+          <div className="section-pill center-pill">EMPLOYER BENEFITS</div>
+          <h2 className="section-heading">
+            What employers get with{" "}
+            <span className="highlight-crimson">VetanNow.</span>
+          </h2>
+          <p className="section-subheading">
+            Improve your employer brand, attract talent, and reduce attrition at zero cost with a powerful EWA offering.
           </p>
-
-          <NavHashLink smooth to="/#contact-us" className="demo-button">
-            Request Demo
-          </NavHashLink>
         </div>
-      </div>
-      {/* <div className="Testimonials">
-        <h1>Why businesses love VetanNow?</h1>
 
-        <h4>
-          <img src={star} alt="employer Icon" />
-          Testimonials
-        </h4>
-
-        <div className="video-scroll-wrapper">
-          <button
-            className="scroll-btn left"
-            aria-label="Scroll left"
-            onClick={() => scroll("left")}
-          >
-            &#10094;
-          </button>
-
-          <div className="video-container" ref={scrollRef}>
-            {[
-              "1g2b3c4d5e6",
-              "7h8i9j0k1l2",
-              "3m4n5o6p7q8",
-              "3m4n5o6p7q8",
-              "3m4n5o6p7q8",
-              "3m4n5o6p7q8",
-              "3m4n5o6p7q8",
-            ].map((videoId, index) => (
-              <div className="video" key={index}>
-                <iframe
-                  src={`https://www.youtube.com/embed/${videoId}`}
-                  title={`YouTube video ${index + 1}`}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  loading="lazy"
-                ></iframe>
-              </div>
-            ))}
+        <div className="employer-benefits-grid">
+          <div className="employer-benefit-card">
+            <div className="benefit-icon-box">
+              <img src={accessIcon} alt="Productivity" />
+            </div>
+            <div>
+              <h3>Improve Employee Productivity</h3>
+              <p>
+                By eliminating financial stress, employees are better focused, engaged,
+                and consistently productive on the job.
+              </p>
+            </div>
           </div>
 
-          <button
-            className="scroll-btn right"
-            aria-label="Scroll right"
-            onClick={() => scroll("right")}
-          >
-            &#10095;
-          </button>
+          <div className="employer-benefit-card">
+            <div className="benefit-icon-box">
+              <img src={availabilityIcon} alt="Retention" />
+            </div>
+            <div>
+              <h3>Attract Talent & Reduce Turnover</h3>
+              <p>
+                Offering earned salary access makes your organization a preferred employer
+                for both new hires and existing workforce.
+              </p>
+            </div>
+          </div>
+
+          <div className="employer-benefit-card">
+            <div className="benefit-icon-box">
+              <img src={percentageIcon} alt="Dashboard" />
+            </div>
+            <div>
+              <h3>Track Employee Financial Health</h3>
+              <p>
+                Employer dashboards and analytics provide real-time insights into usage,
+                adoption, and workforce wellbeing metrics.
+              </p>
+            </div>
+          </div>
+
+          <div className="employer-benefit-card">
+            <div className="benefit-icon-box">
+              <img src={coachingIcon} alt="Plug and play" />
+            </div>
+            <div>
+              <h3>Zero Cost Plug-and-Play</h3>
+              <p>
+                Compatible with all major HRMS platforms with deployment in 24-48 hours
+                and dedicated onboarding support.
+              </p>
+            </div>
+          </div>
         </div>
-      </div> */}
-      <div className="Ready_to_get_started">
-        <h1>
-          Ready to get started with <span>VetanNow</span>?
-        </h1>
-        <p>
-          VetanNow focuses on building long term financial wellness for the
-          employed workforce via multiple tools for easy budgeting, tracking and
-          financial coaching. Download the VetanNow App if your Employer has
-          partnered with VetanNow
-        </p>
-        <div className="buttons">
-          <NavHashLink smooth to="/#contact-us" className="demo-button">
-            Request Demo
+      </section>
+
+      {/* ========================================================= */}
+      {/* KNOW MORE / BROCHURE CTA                                  */}
+      {/* ========================================================= */}
+      <section className="employer-know-more-section">
+        <div className="employer-know-more-card">
+          <div className="section-pill center-pill">LEARN MORE</div>
+          <h2 className="cta-banner-title">
+            Know more about <span className="highlight-crimson">VetanNow.</span>
+          </h2>
+          <p className="cta-banner-desc">
+            Download our corporate brochure to explore how VetanNow can improve the
+            financial wellness of your employees and transform your employer brand.
+          </p>
+          <NavHashLink smooth to="/#contact-us" className="btn-crimson-primary">
+            Request Demo <span className="btn-arrow">→</span>
           </NavHashLink>
         </div>
-      </div>
+      </section>
+
+      {/* ========================================================= */}
+      {/* READY TO GET STARTED BANNER                               */}
+      {/* ========================================================= */}
+      <section className="employer-cta-banner-section">
+        <div className="employer-cta-banner-card">
+          <h2 className="cta-banner-title">
+            Ready to get started with <span className="highlight-crimson">VetanNow</span>?
+          </h2>
+          <p className="cta-banner-desc">
+            VetanNow focuses on building long-term financial wellness for the employed
+            workforce via multiple tools for easy budgeting, tracking, and financial
+            coaching. Partner with us today.
+          </p>
+          <NavHashLink smooth to="/#contact-us" className="btn-crimson-primary">
+            Request Demo <span className="btn-arrow">→</span>
+          </NavHashLink>
+        </div>
+      </section>
     </div>
   );
 };

@@ -1,25 +1,22 @@
-import React from "react";
-import rightImage from "../img/employee1.webp";
+import React, { useState } from "react";
 import "./Employee.css";
-import empolyee from "../img/employee.webp";
-import "./how_vetannow_works.css";
-import access from "../img/access.png";
-import availability from "../img/availability.png";
-import paperwork from "../img/paperwork.png";
-import percentage from "../img/percentage.png";
-import coaching from "../img/coaching.png";
-import multilingual from "../img/multilingual.png";
-import bg from "../img/employee2.webp";
-import "./Get_in_touch.css";
-import Getintouch from "../img/Get in touch.webp";
-import "./Ready_to_get_started.css";
-import playstore from "../img/playstore.png";
-import appstore from "../img/appstore.png";
-import { NavHashLink } from "react-router-hash-link";
 import Seo from "../components/Seo";
+import { NavHashLink } from "react-router-hash-link";
+
+// Assets
+import rightImage from "../img/employee1.webp";
+import accessIcon from "../img/access.png";
+import availabilityIcon from "../img/availability.png";
+import paperworkIcon from "../img/paperwork.png";
+import percentageIcon from "../img/percentage.png";
+import coachingIcon from "../img/coaching.png";
+import multilingualIcon from "../img/multilingual.png";
+import getInTouchImg from "../img/Get in touch.webp";
+import playstoreIcon from "../img/playstore.png";
+import appstoreIcon from "../img/appstore.png";
 
 const Employee = () => {
-  const [showPopup, setShowPopup] = React.useState(false);
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleDownloadClick = (e) => {
     e.preventDefault();
@@ -28,223 +25,258 @@ const Employee = () => {
 
   const closePopup = () => setShowPopup(false);
 
-  const themeColor = "#d40602";
-
   return (
-    <div className="employee-container">
+    <div className="employee-page-wrapper">
       <Seo
-        title="Employees | VetanNow"
-        description="Access earned wages before payday with VetanNow. Pay bills on time and avoid waiting for the next salary cycle."
+        title="Employees | VetanNow — Access Your Earned Salary Anytime"
+        description="Access earned wages before payday with VetanNow. Pay bills on time, avoid loan sharks, and gain complete control over your money."
         path="/services/employee"
       />
-      <div className="banner">
-        <div className="left">
-          <h4>
-            <img src={empolyee} alt="Employee Icon" />
-            Employees
-          </h4>
-          <h1>Need Money Immediately?</h1>
 
-          <p>
-            The VetanNow app is the easiest, most secure way to access your
-            earned but unpaid wages before your next payday. Get early access to
-            pay bills on time, avoid late fees and meet your financial goals.
-            With VetanNow you have access to your earned, accrued pay as you
-            need it.
+      {/* ========================================================= */}
+      {/* HERO SECTION                                              */}
+      {/* ========================================================= */}
+      <section className="employee-hero-section">
+        <div className="employee-hero-container">
+          <div className="employee-hero-content">
+            <div className="section-pill">
+              <span className="pill-dot"></span>
+              FOR EMPLOYEES
+            </div>
+
+            <h1 className="employee-hero-title">
+              Need Money Immediately?{" "}
+              <span className="highlight-crimson">Make any day your payday.</span>
+            </h1>
+
+            <p className="employee-hero-subtitle">
+              Financial flexibility to live with dignity and zero debt stress.
+            </p>
+
+            <p className="employee-hero-desc">
+              The VetanNow app is the easiest, most secure way to access your earned but
+              unpaid wages before your regular payday. Pay bills on time, handle emergencies,
+              and avoid predatory payday loans or high-interest borrowings.
+            </p>
+
+            <div className="employee-hero-actions">
+              <button
+                type="button"
+                className="btn-crimson-primary"
+                onClick={handleDownloadClick}
+              >
+                Download VetanNow App <span className="btn-arrow">→</span>
+              </button>
+              <a href="#refer-employer" className="btn-crimson-secondary">
+                Tell Your Employer
+              </a>
+            </div>
+          </div>
+
+          <div className="employee-hero-visual">
+            <div className="visual-card-wrap">
+              <img
+                src={rightImage}
+                alt="Employee reviewing salary balance on VetanNow app"
+                className="section-featured-image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================= */}
+      {/* 6 BENEFITS SECTION                                        */}
+      {/* ========================================================= */}
+      <section className="employee-benefits-section">
+        <div className="section-header text-center">
+          <div className="section-pill center-pill">FINANCIAL FREEDOM</div>
+          <h2 className="section-heading">
+            How VetanNow helps you become{" "}
+            <span className="highlight-crimson">financially free.</span>
+          </h2>
+          <p className="section-subheading">
+            Real-time access to your own hard-earned money with absolute transparency and ease.
           </p>
-          <button
-            className="demo-button"
-            onClick={handleDownloadClick}
-           
-          >
-            Download VentanNow
-          </button>
         </div>
-        <div className="right">
-          <img src={rightImage} alt="Home Banner" />
-        </div>
-      </div>
 
-      <div className="how_vetannow_works">
-        <h1>
-          How <span>VetanNow </span>
-          can help you become a financially free
-        </h1>
-        <div className="how_vetannow_works_container">
-          <div className="col">
-            {/* 3 li 1.Easy access to liquidity 2. Timely availability of funds 3.Hassle-free paperwork */}
-            <li>
-              <img src={access} alt="access" />
-              Easy access to liquidity
-            </li>
-            <li>
-              <img src={availability} alt="availability" />
-              Timely availability of funds
-            </li>
-            <li>
-              <img src={paperwork} alt="paperwork" />
-              Hassle-free paperwork
-            </li>
+        <div className="benefits-cards-grid">
+          <div className="benefit-card">
+            <div className="benefit-icon-box">
+              <img src={accessIcon} alt="Access Icon" />
+            </div>
+            <h3>Easy Access to Liquidity</h3>
+            <p>
+              Withdraw accumulated earned wages on-demand directly into your existing salary bank account within seconds.
+            </p>
           </div>
-          <div className="col">
-            {/* 3 li 1.No high interest charges 2. Get financial coaching 3. Multilingual support */}
-            <li>
-              <img src={percentage} alt="availability" />
-              No high interest charges
-            </li>
-            <li>
-              <img src={coaching} alt="coaching" />
-              Get financial coaching
-            </li>
-            <li>
-              <img src={multilingual} alt="multilingual" />
-              Multilingual support
-            </li>
-          </div>
-          <img className="bg" src={bg} alt="bg" />
-        </div>
-      </div>
 
-      <div className="Get_in_touch">
-        <div className="left">
-          <h1>Tell your employer you want on-demand pay</h1>
-          <p>
-            Your employer can integrate with VetanNow easily and atno cost. Let
-            themknow you'd like earned waged access by getting in touch with us.
+          <div className="benefit-card">
+            <div className="benefit-icon-box">
+              <img src={availabilityIcon} alt="Availability Icon" />
+            </div>
+            <h3>Timely 24/7 Availability</h3>
+            <p>
+              Funds are disbursed in under 60 seconds at any time of the day or night — weekends and holidays included.
+            </p>
+          </div>
+
+          <div className="benefit-card">
+            <div className="benefit-icon-box">
+              <img src={paperworkIcon} alt="Paperwork Icon" />
+            </div>
+            <h3>Zero Paperwork or Checks</h3>
+            <p>
+              No loan applications, no tedious documents, and no impact on your CIBIL or credit score.
+            </p>
+          </div>
+
+          <div className="benefit-card">
+            <div className="benefit-icon-box">
+              <img src={percentageIcon} alt="Interest Icon" />
+            </div>
+            <h3>No Predatory Interest Rates</h3>
+            <p>
+              Transparent flat transaction fees with 0% compounding interest. You only withdraw what you have already worked for.
+            </p>
+          </div>
+
+          <div className="benefit-card">
+            <div className="benefit-icon-box">
+              <img src={coachingIcon} alt="Coaching Icon" />
+            </div>
+            <h3>Smart Financial Coaching</h3>
+            <p>
+              In-app budgeting, spending trackers, and financial wellness tips to help you build long-term savings habits.
+            </p>
+          </div>
+
+          <div className="benefit-card">
+            <div className="benefit-icon-box">
+              <img src={multilingualIcon} alt="Multilingual Icon" />
+            </div>
+            <h3>Multilingual Indian Support</h3>
+            <p>
+              Available in multiple regional Indian languages with dedicated phone and chat customer assistance.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================= */}
+      {/* REFER EMPLOYER SECTION                                    */}
+      {/* ========================================================= */}
+      <section className="refer-employer-section" id="refer-employer">
+        <div className="section-grid-2col">
+          <div className="col-text">
+            <div className="section-pill">BRING VETANNOW TO WORK</div>
+            <h2 className="section-heading">
+              Tell your employer you want{" "}
+              <span className="highlight-crimson">on-demand pay.</span>
+            </h2>
+
+            <p className="text-body">
+              VetanNow operates as an employer-benefit program. If your company hasn't
+              partnered with us yet, let us know!
+            </p>
+
+            <p className="text-body">
+              Your company can integrate VetanNow easily and at <strong>zero cost</strong>, with
+              no alterations to existing payroll cycles or employer cash flows.
+            </p>
+
+            <NavHashLink smooth to="/#contact-us" className="btn-crimson-primary" style={{ marginTop: "16px" }}>
+              Refer Your Company HR <span className="btn-arrow">→</span>
+            </NavHashLink>
+          </div>
+
+          <div className="col-visual">
+            <div className="visual-card-wrap">
+              <img
+                src={getInTouchImg}
+                alt="Refer your employer to VetanNow"
+                className="section-featured-image"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================= */}
+      {/* READY TO GET STARTED / APP DOWNLOAD BANNER                */}
+      {/* ========================================================= */}
+      <section className="employee-cta-banner-section">
+        <div className="employee-cta-banner-card">
+          <div className="section-pill center-pill">JOIN THE REVOLUTION</div>
+          <h2 className="cta-banner-title">
+            Ready to get started with <span className="highlight-crimson">VetanNow</span>?
+          </h2>
+          <p className="cta-banner-desc">
+            VetanNow focuses on building long-term financial wellness for India’s workforce.
+            Download the app if your employer is partnered with VetanNow.
           </p>
-          <NavHashLink
-            smooth
-            to="/#contact-us"
-            className="demo-button"
-            style={{ background: themeColor }}
-          >
-            Get in Touch
-          </NavHashLink>
-        </div>
-        <div className="right">
-          <img src={Getintouch} alt="Get in Touch" />
-        </div>
-      </div>
 
-      {/* <div className="Testimonials">
-        <h1>Why employees love VetanNow?</h1>
-
-        <h4>
-          <img src={star} alt="Employee Icon" />
-          Testimonials
-        </h4>
-
-        <div className="video-scroll-wrapper">
-          <button
-            className="scroll-btn left"
-            aria-label="Scroll left"
-            onClick={() => scroll("left")}
-          >
-            &#10094;
-          </button>
-
-          <div className="video-container" ref={scrollRef}>
-            {[
-              "1g2b3c4d5e6",
-              "7h8i9j0k1l2",
-              "3m4n5o6p7q8",
-              "3m4n5o6p7q8",
-              "3m4n5o6p7q8",
-              "3m4n5o6p7q8",
-              "3m4n5o6p7q8",
-            ].map((videoId, index) => (
-              <div className="video" key={index}>
-                <iframe
-                  src={`https://www.youtube.com/embed/${videoId}`}
-                  title={`YouTube video ${index + 1}`}
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  loading="lazy"
-                ></iframe>
-              </div>
-            ))}
-          </div>
-
-          <button
-            className="scroll-btn right"
-            aria-label="Scroll right"
-            onClick={() => scroll("right")}
-          >
-            &#10095;
-          </button>
-        </div>
-      </div> */}
-      <div className="Ready_to_get_started">
-        <h1>
-          Ready to get started with <span>VetanNow</span>?
-        </h1>
-        <p>
-          VetanNow focuses on building long term financial wellness for the
-          employed workforce via multiple tools for easy budgeting, tracking and
-          financial coaching. Download the VetanNow App if your Employer has
-          partnered with VetanNow
-        </p>
-        <div className="buttons">
-          {/* playstore and app store */}
-          <button
-            className="demo-button"
-            onClick={handleDownloadClick}
-          >
-            <img src={playstore} alt="playstore" />
-            Download on Playstore
-          </button>
-          <button
-            className="demo-button"
-            onClick={handleDownloadClick}
-          >
-            <img src={appstore} alt="playstore" />
-            Download on App Store
-          </button>
-        </div>
-      </div>
-      {showPopup && (
-        <div
-          className="popup-overlay"
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            background: "rgba(0,0,0,0.4)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            zIndex: 9999,
-          }}
-        >
-          <div
-            className="popup-content"
-            style={{
-              background: "#fff",
-              padding: "2rem",
-              borderRadius: "8px",
-              textAlign: "center",
-              minWidth: "280px",
-            }}
-          >
-            <h2 style={{ color: themeColor }}>App is coming soon</h2>
-            <p>Stay tuned!</p>
+          <div className="app-download-buttons">
             <button
-              onClick={closePopup}
-              style={{
-                marginTop: "1rem",
-                padding: "0.5rem 1.5rem",
-                border: "none",
-                background: themeColor,
-                color: "#fff",
-                borderRadius: "4px",
-                cursor: "pointer",
-              }}
+              type="button"
+              className="store-btn"
+              onClick={handleDownloadClick}
             >
-              Close
+              <img src={playstoreIcon} alt="Google Play" />
+              <div className="btn-text">
+                <span>GET IT ON</span>
+                <strong>Google Play</strong>
+              </div>
             </button>
+
+            <button
+              type="button"
+              className="store-btn"
+              onClick={handleDownloadClick}
+            >
+              <img src={appstoreIcon} alt="Apple App Store" />
+              <div className="btn-text">
+                <span>DOWNLOAD ON THE</span>
+                <strong>App Store</strong>
+              </div>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================= */}
+      {/* APP COMING SOON MODAL                                     */}
+      {/* ========================================================= */}
+      {showPopup && (
+        <div className="video-modal-backdrop" onClick={closePopup}>
+          <div className="video-modal-dialog" onClick={(e) => e.stopPropagation()}>
+            <button
+              type="button"
+              className="modal-close-button"
+              onClick={closePopup}
+              aria-label="Close modal"
+            >
+              ✕
+            </button>
+            <div className="video-player-content">
+              <div className="section-pill center-pill">MOBILE APP LAUNCH</div>
+              <h3 style={{ fontSize: "22px", fontWeight: "800", color: "#111827", margin: "12px 0 8px" }}>
+                Mobile Apps Coming Soon!
+              </h3>
+              <p style={{ fontSize: "14px", color: "#4b5563", lineHeight: "1.6", marginBottom: "20px" }}>
+                We are currently rolling out app updates to our partner organizations.
+                Stay tuned for direct Android and iOS store links!
+              </p>
+              <button
+                type="button"
+                className="btn-crimson-primary"
+                onClick={closePopup}
+                style={{ padding: "10px 24px", fontSize: "14px" }}
+              >
+                Got It
+              </button>
+            </div>
           </div>
         </div>
       )}
