@@ -498,7 +498,7 @@ const Home = () => {
                   </div>
 
                   <p className="founder-quote">
-                    “No one should have to borrow to access the money they've already earned.”
+                    “A financially stronger workfroce builds a stronger Bharat."
                   </p>
 
                   <a

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
-import vetannowLogo from "../img/vetannow_logo.webp";
+import logoIcon from "../img/logo.webp";
 import "./footer.css";
 
 const Footer = () => {
@@ -10,9 +10,15 @@ const Footer = () => {
       <div className="footer-container">
         {/* Column 1: Brand */}
         <div className="footer-brand-col">
-          <div className="footer-logo-card">
-            <img src={vetannowLogo} alt="VetanNow" className="footer-logo-img" />
+          {/* Logo icon + brand name/tagline side by side */}
+          <div className="footer-logo-row">
+            <img src={logoIcon} alt="VetanNow" className="footer-logo-img" />
+            <div className="footer-brand-text">
+              <span className="footer-brand-name">VetanNow</span>
+              <span className="footer-brand-tagline">Empowering Bharat Workforces</span>
+            </div>
           </div>
+          {/* Description below the logo row */}
           <p className="footer-brand-desc">
             VetanNow is India's financial wellness suite that enables employees to build
             a foundation for financial well-being.
