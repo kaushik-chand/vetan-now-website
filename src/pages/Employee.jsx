@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Employee.css";
 import Seo from "../components/Seo";
+import { Link } from "react-router-dom";
 import { NavHashLink } from "react-router-hash-link";
 
 // Assets
@@ -45,18 +46,15 @@ const Employee = () => {
             </div>
 
             <h1 className="employee-hero-title">
-              Need Money Immediately?{" "}
-              <span className="highlight-crimson">Make any day your payday.</span>
+              Your hard work.
+              <br />
+              <span className="highlight-crimson">Your earned wages.</span>
+              <br />
+              More flexibility.
             </h1>
 
-            <p className="employee-hero-subtitle">
-              Financial flexibility to live with dignity and zero debt stress.
-            </p>
-
             <p className="employee-hero-desc">
-              The VetanNow app is the easiest, most secure way to access your earned but
-              unpaid wages before your regular payday. Pay bills on time, handle emergencies,
-              and avoid predatory payday loans or high-interest borrowings.
+              Life doesn’t always wait for payday. VetanNow helps eligible employees access a portion of the wages they’ve already earned, when they need it.
             </p>
 
             <div className="employee-hero-actions">
@@ -67,9 +65,9 @@ const Employee = () => {
               >
                 See how it works <span className="btn-arrow">→</span>
               </NavHashLink>
-              <a href="#refer-employer" className="btn-crimson-secondary">
-                Tell Your Employer
-              </a>
+              <Link to="/faq" className="btn-crimson-secondary">
+                Explore FAQs
+              </Link>
             </div>
           </div>
 
