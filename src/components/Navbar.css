@@ -142,11 +142,33 @@
     margin-top: 6px;
 }
 
+/* Invisible bridge so mouse moving from button to dropdown doesn't lose hover */
+.dropdown-content::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 0;
+    right: 0;
+    height: 12px;
+}
+
+@keyframes dropdownFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .dropdown:hover .dropdown-content,
 .dropdown.open .dropdown-content {
     display: flex;
     flex-direction: column;
     gap: 4px;
+    animation: dropdownFadeIn 0.2s ease forwards;
 }
 
 .dropdown-item {

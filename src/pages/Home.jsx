@@ -412,24 +412,22 @@ const Home = () => {
 
             <div className="founder-story">
               <p className="text-body">
-                In financial stress, the biggest irony of modern business lies in the simple
-                reality: hard-working individuals are left with no choice but to wait for earned
-                wages when unexpected hurdles arise. No one should be forced to take high-interest
-                loans for money they've already worked for.
+                I'm Manish Shukla, the Founder & CEO of VetanNow. I started VetanNow with a simple
+                belief — that every hard working employee in India should have access to their earned
+                wages when they need it, and a better way to manage their financial well-being.
               </p>
 
               <p className="text-body">
-                With a background in fintech and digital product development, I've seen firsthand
-                the friction between traditional payroll schedules and real-world emergencies.
-                VetanNow was born from this urgency: to solve the Payday Gap with a fair, ethical,
-                and accessible financial safety net. We don't just provide wages early; we provide
-                peace of mind.
+                With experience in fintech and digital lending, I've seen first-hand the financial
+                challenges faced by millions of employees — from unexpected expenses to irregular
+                cash flow. VetanNow is my effort to solve the “Payday Gap” by building a trusted,
+                technology-driven platform that gives employees greater financial flexibility,
+                while helping employers support their workforce's well-being.
               </p>
 
               <p className="text-body">
-                Our promise is simple: transparent fees, zero debt trap, and a platform that
-                respects both employer and employee. Because a financially secure workforce is an
-                empowered workforce.
+                I'm passionate about using technology to create real impact — making financial
+                wellness simple, accessible and inclusive for India's working population.
               </p>
             </div>
 
@@ -443,7 +441,7 @@ const Home = () => {
                 </div>
                 <div>
                   <h5>Purpose-Driven</h5>
-                  <p>Built to bridge financial gaps with zero interest debt burden.</p>
+                  <p>Solve real financial challenges for India's workforce.</p>
                 </div>
               </div>
 
@@ -457,7 +455,7 @@ const Home = () => {
                 </div>
                 <div>
                   <h5>Product-Focused</h5>
-                  <p>Built from real feedback and enterprise needs.</p>
+                  <p>Build simple, scalable and reliable solutions.</p>
                 </div>
               </div>
 
@@ -471,7 +469,7 @@ const Home = () => {
                 </div>
                 <div>
                   <h5>Long-Term Vision</h5>
-                  <p>Expanding into complete financial wellness for the modern workforce.</p>
+                  <p>Create a financially stronger and more confident workforce.</p>
                 </div>
               </div>
             </div>
@@ -483,7 +481,7 @@ const Home = () => {
                 <div className="founder-card-top-tag">
                   Empowering Bharat's Workforce
                 </div>
-                
+
                 <div className="founder-image-container">
                   <img
                     src={founderPortrait}
@@ -545,21 +543,21 @@ const Home = () => {
             </h2>
 
             <p className="text-body">
-              Financial wellness is a shared responsibility, and true impact comes when
-              ecosystems collaborate to create seamless experiences for companies and their
-              employees.
+              Financial wellbeing is a shared responsibility. We believe employees deserve access to
+              meaningful financial wellness solutions, and businesses deserve the right partners to make
+              that possible.
             </p>
 
             <p className="text-body">
-              At VetanNow, we work at the intersection of companies, platforms, and financial
-              institutions to make earned wage access an effortless extension of everyday payroll
-              in India.
+              At VetanNow, we collaborate with HRMS and payroll platforms, employers, and financial
+              institutions to make earned wage access and financial wellness a more accessible part of
+              the workplace.
             </p>
 
             <p className="text-body">
-              By bringing together workforce ecosystems and financial infrastructure, we
-              ensure an intuitive, transparent, and compliant system designed to improve cash
-              flows and eliminate employee financial stress.
+              By bringing technology, workforce ecosystems, and financial infrastructure together, we aim
+              to create solutions that deliver value to businesses while helping employees navigate their
+              financial lives with greater flexibility.
             </p>
           </div>
         </div>
@@ -711,7 +709,7 @@ const Home = () => {
                   </div>
                   <div>
                     <label>Call Us</label>
-                    <a href="tel:+919876543210">+91 98765 43210</a>
+                    <a href="tel:+919876543210">+91 88793 42228</a>
                   </div>
                 </div>
 
@@ -724,7 +722,7 @@ const Home = () => {
                   </div>
                   <div>
                     <label>Headquarters</label>
-                    <span>Bengaluru, Karnataka, India</span>
+                    <span>Navi Mumbai, India</span>
                   </div>
                 </div>
               </div>

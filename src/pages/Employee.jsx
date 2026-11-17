@@ -60,13 +60,13 @@ const Employee = () => {
             </p>
 
             <div className="employee-hero-actions">
-              <button
-                type="button"
+              <NavHashLink
+                smooth
+                to="/#how-it-works"
                 className="btn-crimson-primary"
-                onClick={handleDownloadClick}
               >
-                Download VetanNow App <span className="btn-arrow">→</span>
-              </button>
+                See how it works <span className="btn-arrow">→</span>
+              </NavHashLink>
               <a href="#refer-employer" className="btn-crimson-secondary">
                 Tell Your Employer
               </a>
@@ -159,6 +159,62 @@ const Employee = () => {
             <p>
               Available in multiple regional Indian languages with dedicated phone and chat customer assistance.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ========================================================= */}
+      {/* HOW VETANNOW WORKS SECTION                                */}
+      {/* ========================================================= */}
+      <section className="section steps" id="how">
+        <div className="wrap center">
+          <div className="kicker">Simple by design</div>
+
+          <h2>How VetanNow works</h2>
+
+          <p className="sub">
+            A straightforward journey, designed to fit around
+            your employer’s payroll process.
+          </p>
+
+          <div className="stepGrid">
+            <article className="step">
+              <div className="num">01</div>
+              <h3>Your employer enables VetanNow</h3>
+              <p>
+                The benefit is made available to eligible employees
+                through the employer’s agreed process.
+              </p>
+            </article>
+
+            <article className="step">
+              <div className="num">02</div>
+              <h3>Check your earned wages</h3>
+              <p>
+                View the amount you may be eligible to access,
+                based on available payroll information and
+                applicable limits.
+              </p>
+            </article>
+
+            <article className="step">
+              <div className="num">03</div>
+              <h3>Request when you need it</h3>
+              <p>
+                Choose whether to access an eligible portion
+                of your earned wages. It’s your choice.
+              </p>
+            </article>
+
+            <article className="step">
+              <div className="num">04</div>
+              <h3>Repayment through payroll</h3>
+              <p>
+                Where applicable, the accessed amount is recovered
+                through the agreed payroll process and reflected
+                in the relevant records.
+              </p>
+            </article>
           </div>
         </div>
       </section>

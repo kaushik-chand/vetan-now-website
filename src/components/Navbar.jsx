@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./Navbar.css";
 import logo from "../img/logo.webp";
 import { Link, NavLink, useLocation } from "react-router-dom";
@@ -7,6 +7,7 @@ import { NavHashLink } from "react-router-hash-link";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const timeoutRef = useRef(null);
   const location = useLocation();
 
   const isServicesActive = location.pathname.startsWith("/services");
@@ -16,16 +17,47 @@ const Navbar = () => {
   const isFaqActive = location.pathname === "/faq";
 
   const closeMenu = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
     setMenuOpen(false);
     setServicesOpen(false);
   };
 
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    setServicesOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    timeoutRef.current = setTimeout(() => {
+      setServicesOpen(false);
+    }, 2000);
+  };
+
   const toggleServices = (event) => {
     event.stopPropagation();
-    if (window.matchMedia("(max-width: 1324px)").matches) {
-      setServicesOpen((open) => !open);
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
     }
+    setServicesOpen((open) => !open);
   };
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   return (
     <nav className="navbar-container">
@@ -49,7 +81,11 @@ const Navbar = () => {
           Home
         </NavLink>
 
-        <div className={`dropdown ${servicesOpen ? "open" : ""}`}>
+        <div
+          className={`dropdown ${servicesOpen ? "open" : ""}`}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        >
           <button
             type="button"
             className={`dropdown-toggle nav-link ${isServicesActive ? "active" : ""}`}
@@ -60,6 +96,7 @@ const Navbar = () => {
           <div className="dropdown-content">
             <NavLink
               to="/services/employee"
+              onClick={closeMenu}
               className={({ isActive }) =>
                 `dropdown-item ${isActive ? "item-active" : ""}`
               }
@@ -68,6 +105,7 @@ const Navbar = () => {
             </NavLink>
             <NavLink
               to="/services/employer"
+              onClick={closeMenu}
               className={({ isActive }) =>
                 `dropdown-item ${isActive ? "item-active" : ""}`
               }
