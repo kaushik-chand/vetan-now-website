@@ -35,23 +35,20 @@ const Employer = () => {
             </div>
 
             <h1 className="employer-hero-title">
-              <span className="highlight-crimson">VetanNow</span> is the right earned wage
-              access provider for your organization.
+              <span className="highlight-crimson">VetanNow</span> Support your people beyond the payday.
             </h1>
 
             <p className="employer-hero-desc">
-              VetanNow allows employees of partnering firms to access a portion of their
-              earned pay as soon as they've earned it, with zero financial impact on your
-              business and a seamless payroll integration at no cost to you.
+              Give employees more flexibility over the wages they have already earned. VetanNow helps employers bring Earned Wage Access into the employee experience—through a responsible, HRMS- and payroll-connected approach.
             </p>
 
             <div className="employer-hero-actions">
               <NavHashLink smooth to="/#contact-us" className="btn-crimson-primary">
-                Request a Demo <span className="btn-arrow">→</span>
+                Bring VetanNow to your workplace <span className="btn-arrow">→</span>
               </NavHashLink>
-              <a href="#employer-benefits" className="btn-crimson-secondary">
-                See Employer Benefits
-              </a>
+              <NavHashLink smooth to="#employer-benefits" className="btn-crimson-secondary">
+                See how it works
+              </NavHashLink>
             </div>
           </div>
 
@@ -106,6 +103,237 @@ const Employer = () => {
           </div>
         </div>
       </section>
+
+      {/* ========================================================= */}
+      {/* VETANNOW: FOUR STANDALONE SECTIONS                        */}
+      {/* ========================================================= */}
+      <div className="vetannow-sections">
+        {/* 1. The payday gap */}
+        <section className="vn-section vn-problem" id="payday-gap">
+          <div className="vn-wrap">
+            <div className="vn-center">
+              <div className="vn-kicker">The payday gap</div>
+
+              <h2>Your employees earn every working day. Their financial needs don’t wait for payday.</h2>
+
+              <p className="vn-intro">
+                An unexpected bill or an urgent expense can arrive days before salary day. When earned wages are out of reach, employees may turn to costly short-term borrowing.
+              </p>
+            </div>
+
+            <div className="vn-problem-grid">
+              <div className="vn-problem-quote">
+                <div className="vn-big">
+                  Sometimes, the challenge isn't how much people earn. It's{" "}
+                  <span>when they can access it.</span>
+                </div>
+
+                <p>
+                  Not every short-term cash-flow problem should become a credit problem.
+                </p>
+              </div>
+
+              <div className="vn-bullets">
+                <article className="vn-bullet">
+                  <div className="vn-bullet-icon">01</div>
+                  <div>
+                    <h3>Financial pressure affects the workday</h3>
+                    <p>
+                      Money worries can follow employees into the workplace and make it harder to focus on what matters.
+                    </p>
+                  </div>
+                </article>
+
+                <article className="vn-bullet">
+                  <div className="vn-bullet-icon">02</div>
+                  <div>
+                    <h3>Traditional pay cycles leave a timing gap</h3>
+                    <p>
+                      Employees may have already earned wages but still need to wait for the scheduled payday.
+                    </p>
+                  </div>
+                </article>
+
+                <article className="vn-bullet">
+                  <div className="vn-bullet-icon">03</div>
+                  <div>
+                    <h3>Wellbeing benefits should meet real needs</h3>
+                    <p>
+                      Practical financial flexibility can complement the wider employee wellbeing initiatives you already offer.
+                    </p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 2. Why employers choose to explore VetanNow */}
+        <section className="vn-section vn-benefits" id="why-vetannow">
+          <div className="vn-wrap">
+            <div className="vn-center">
+              <div className="vn-kicker">
+                Why employers choose to explore VetanNow
+              </div>
+
+              <h2>
+                Make financial wellbeing a more practical part of your people strategy.
+              </h2>
+
+              <p className="vn-intro">
+                A benefit designed around the realities of employees’ cash flow, and the operational needs of employers.
+              </p>
+            </div>
+
+            <div className="vn-cards">
+              <article className="vn-card">
+                <div className="vn-card-icon">♡</div>
+                <h3>Show employees you understand</h3>
+                <p>
+                  Offer a benefit that recognises real-life financial needs—not just the annual compensation conversation.
+                </p>
+              </article>
+
+              <article className="vn-card">
+                <div className="vn-card-icon">↗</div>
+                <h3>Strengthen your employee experience</h3>
+                <p>
+                  Add a practical financial wellness option alongside your existing benefits and engagement initiatives.
+                </p>
+              </article>
+
+              <article className="vn-card">
+                <div className="vn-card-icon">⌘</div>
+                <h3>Fit into existing workflows</h3>
+                <p>
+                  Explore an HRMS- and payroll-connected model designed to work with your organisation’s processes.
+                </p>
+              </article>
+
+              <article className="vn-card">
+                <div className="vn-card-icon">◎</div>
+                <h3>Give employees more flexibility</h3>
+                <p>
+                  Eligible employees can request access to a portion of wages they have already earned, before payday.
+                </p>
+              </article>
+
+              <article className="vn-card">
+                <div className="vn-card-icon">▤</div>
+                <h3>Keep policies clear</h3>
+                <p>
+                  Define the programme around agreed eligibility, access limits, and payroll processes.
+                </p>
+              </article>
+
+              <article className="vn-card">
+                <div className="vn-card-icon">＋</div>
+                <h3>Start with a focused rollout</h3>
+                <p>
+                  Explore a phased implementation or pilot aligned with your workforce and operational readiness.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        {/* 3. Simple by design */}
+        <section className="vn-section vn-how" id="how-vetannow-works">
+          <div className="vn-wrap">
+            <div className="vn-center">
+              <div className="vn-kicker">Simple by design</div>
+
+              <h2>
+                A clear experience for your organisation and your employees.
+              </h2>
+
+              <p className="vn-intro">
+                VetanNow works with your HRMS/payroll ecosystem and agreed programme rules to support a straightforward employee journey.
+              </p>
+            </div>
+
+            <div className="vn-steps">
+              <article className="vn-step">
+                <div className="vn-step-no">STEP 01</div>
+                <h3>Align the programme</h3>
+                <p>
+                  We understand your workforce, policies, payroll cycle and implementation requirements.
+                </p>
+              </article>
+
+              <article className="vn-step">
+                <div className="vn-step-no">STEP 02</div>
+                <h3>Connect the workflow</h3>
+                <p>
+                  Configure the agreed HRMS/payroll integration and employee access journey.
+                </p>
+              </article>
+
+              <article className="vn-step">
+                <div className="vn-step-no">STEP 03</div>
+                <h3>Employees request access</h3>
+                <p>
+                  Eligible employees can view available earned wages and make a request within programme limits.
+                </p>
+              </article>
+
+              <article className="vn-step">
+                <div className="vn-step-no">STEP 04</div>
+                <h3>Reconcile through payroll</h3>
+                <p>
+                  Approved access is accounted for through the agreed payroll and settlement process.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        {/* 4. Built around responsibility */}
+        <section className="vn-section vn-trust" id="responsible-access">
+          <div className="vn-wrap vn-trust-grid">
+            <div className="vn-trust-copy">
+              <div className="vn-kicker">Built around responsibility</div>
+
+              <h2>
+                Financial flexibility should come with clarity and control.
+              </h2>
+
+              <p>
+                VetanNow’s approach is centred on access to wages already earned—not an invitation to borrow more. Programme design is aligned with employer policies, employee eligibility and the relevant financial and operational partners.
+              </p>
+            </div>
+
+            <div className="vn-trust-box">
+              <h3>What responsible access means</h3>
+
+              <div className="vn-trust-line">
+                <span className="vn-tick">✓</span>
+                <span>Access is limited to a portion of eligible earned wages.</span>
+              </div>
+
+              <div className="vn-trust-line">
+                <span className="vn-tick">✓</span>
+                <span>Eligibility and limits follow the agreed employer programme.</span>
+              </div>
+
+              <div className="vn-trust-line">
+                <span className="vn-tick">✓</span>
+                <span>Employees can review the applicable terms before making a request.</span>
+              </div>
+
+              <div className="vn-trust-line">
+                <span className="vn-tick">✓</span>
+                <span>Payroll reconciliation follows the agreed implementation model.</span>
+              </div>
+
+              <div className="vn-trust-line">
+                <span className="vn-tick">✓</span>
+                <span>Any regulated financial services are supported through appropriate partners, where applicable.</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
 
       {/* ========================================================= */}
       {/* WHAT EMPLOYERS GET — 4 Benefits Grid                      */}
@@ -177,24 +405,6 @@ const Employer = () => {
         </div>
       </section>
 
-      {/* ========================================================= */}
-      {/* KNOW MORE / BROCHURE CTA                                  */}
-      {/* ========================================================= */}
-      <section className="employer-know-more-section">
-        <div className="employer-know-more-card">
-          <div className="section-pill center-pill">LEARN MORE</div>
-          <h2 className="cta-banner-title">
-            Know more about <span className="highlight-crimson">VetanNow.</span>
-          </h2>
-          <p className="cta-banner-desc">
-            Download our corporate brochure to explore how VetanNow can improve the
-            financial wellness of your employees and transform your employer brand.
-          </p>
-          <NavHashLink smooth to="/#contact-us" className="btn-crimson-primary">
-            Request Demo <span className="btn-arrow">→</span>
-          </NavHashLink>
-        </div>
-      </section>
 
       {/* ========================================================= */}
       {/* READY TO GET STARTED BANNER                               */}
